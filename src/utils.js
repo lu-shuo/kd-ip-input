@@ -42,4 +42,11 @@ function getCursorPosition(el) {
   return ret;
 }
 
-export { getCursorPosition };
+function calItemNumInArray(arr) {
+  return arr.reduce(function (acc, cur) {
+    acc[cur] = (acc[cur] + 1) || 1;
+    return acc;
+  }, {});
+}
+
+export { getCursorPosition, calItemNumInArray };

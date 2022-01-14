@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import KdIpInput from '../../dist/kd-ip-input.esm'
-import '../../dist/kd-ip-input.esm.css'
+import KdIpInput from '../../dist/kd-ip-input.min'
 
 Vue.use(KdIpInput)
 

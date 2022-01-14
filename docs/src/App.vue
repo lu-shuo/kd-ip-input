@@ -63,7 +63,7 @@ export default {
   name: 'app',
   data() {
     return {
-      ip: '',
+      ip: '127.0.0.1',
       ipWithPrefix: '',
       prefix: 'http',
       ipWithPort: '',

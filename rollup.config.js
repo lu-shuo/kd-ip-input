@@ -74,7 +74,7 @@ function genConfig(target) {
       resolve(),
       commonjs(), // 必须防止在babel之前
       vue({ css: false }), // css: false 将<style>块转换为导入语句
-      postcss({ extract: true, plugins: [autoprefixer] })
+      postcss({ extract: false, plugins: [autoprefixer] })
     ]
   }
 

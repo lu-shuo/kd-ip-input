@@ -1,8 +1,8 @@
 {
   "name": "kd-ip-input",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "ip input for Vue2",
+  "main": "dist/kd-ip-input.min.js",
   "scripts": {
     "dev": "rollup -w -c --sourcemap --environment TARGET:dev-esm",
     "dev:esm": "rollup -w -c --sourcemap --environment TARGET:dev-esm",
@@ -10,9 +10,15 @@
     "build": "npm run clean && rollup -c --environment TARGET:prod-umd",
     "build:esm": "rollup -c --environment TARGET:prod-esm",
     "clean": "rimraf dist",
-    "test:unit": "jest --watchAll"
+    "test:unit": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "vue2",
+    "vuejs",
+    "ip",
+    "ip-input",
+    "kedacom"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {

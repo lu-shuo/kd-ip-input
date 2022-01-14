@@ -6,7 +6,7 @@
     >{{prefix | prefixFormat}}</div>
     <ul class="kd-ip-input-group__input-group">
       <li
-        v-for="(section,index) in ipList"
+        v-for="(segment,index) in ipList"
         class="kd-ip-input-group__input-li"
         :key="index"
         :style="{width: liWidth}"
@@ -16,7 +16,7 @@
           class="kd-ip-input-group__input-inner"
           placeholder=""
           autocomplete="off"
-          :value="section"
+          :value="segment"
           @input="handleInput($event, index)"
           @keydown="handleKeyDown($event, index)"
           @blur="handleBlur($event, index)"
@@ -34,13 +34,12 @@
         </div>
       </li>
     </ul>
-
   </div>
 
 </template>
 
 <script>
-import { getCursorPosition } from './utils';
+import { getCursorPosition, calItemNumInArray } from './utils';
 
 export default {
   name: 'kd-ip-input',
@@ -72,7 +71,6 @@ export default {
   data() {
     return {
       ipList: this.showPort ? ['', '', '', '', ''] : ['', '', '', ''],
-      port: '',
     };
   },
   computed: {
@@ -85,11 +83,24 @@ export default {
       this.init(newVal);
     },
     ipList(newVal) {
-      const ip = this.genIp(newVal);
+      if (newVal.every((segment) => segment === '')) {
+        this.$emit('input', '');
+        return;
+      }
+      let ip;
+      const tempList = newVal.slice(0, 4);
+      // 添加前缀
+      ip =
+        this.showPrefix && this.prefix
+          ? this.prefix + '://' + tempList.join('.')
+          : tempList.join('.');
+      // 添加端口
+      ip = this.showPort ? ip + ':' + newVal[4] : ip;
       this.$emit('input', ip);
     },
   },
   filters: {
+    /* istanbul ignore next */
     prefixFormat(val) {
       if (val.indexOf('://') === -1) return val + '://';
       return val;
@@ -105,8 +116,18 @@ export default {
         this.ipList = this.showPort ? ['', '', '', '', ''] : ['', '', '', ''];
         return;
       }
+      // 校验格式
+      if (ip.split('.').length !== 4) {
+        console.error('[kd-ip-input]：ip格式不合法');
+        return;
+      }
+
       // 带前缀，分离前缀
       if (this.showPrefix) {
+        if (!this.prefix) {
+          console.error('[kd-ip-input]：showPrefix模式需指定prefix');
+          return;
+        }
         if (ip.indexOf(this.prefix) !== -1) {
           ip = ip
             .split(/(http|https|wss|ws):\/\//)
@@ -117,29 +138,34 @@ export default {
       // 带端口，分离端口
       if (this.showPort) {
         if (ip.indexOf(':') !== -1) {
-          this.port = ip.split(':')[1].trim();
+          const port = ip.split(':')[1].trim();
+          this.ipList[4] = port;
           ip = ip.split(':')[0].trim();
+        } else {
+          console.error('[kd-ip-input]：invalid ip with port(missing colon)');
+          return;
         }
       }
 
-      if (ip && ip.indexOf('.') !== -1 && ip.split('.').length === 4) {
-        const tempList = ip.split('.');
-        for (let i = 0, length = tempList.length; i < length; i++) {
-          const section = tempList[i].trim();
-          if (isNaN(section) || section < 0 || section > 255) {
-            console.error('请输入正确的ip地址');
-            this.ipList = ['', '', '', ''];
-            break;
-          } else {
-            this.ipList.splice(i, 1, section);
-          }
+      const tempList = ip.split('.');
+      for (let i = 0, length = tempList.length; i < length; i++) {
+        const segment = tempList[i].trim();
+        if (isNaN(segment) || segment < 0 || segment > 255) {
+          console.info(
+            '%c[kd-ip-input]：输入ip范围不合法，已默认恢复至0',
+            'color: red'
+          );
+          this.ipList.splice(i, 1, '0');
+          // break;
+        } else {
+          this.ipList.splice(i, 1, segment);
         }
       }
     },
-    genIp(ipList) {
-      ipList = ipList || this.ipList;
+    genIp() {
+      const ipList = this.ipList;
       let ip;
-      if (ipList.every((section) => section !== '')) {
+      if (ipList.every((segment) => segment !== '')) {
         const tempList = ipList.slice(0, 4);
         // 添加前缀
         ip =
@@ -157,18 +183,16 @@ export default {
       let value = e.target.value;
       //当输入的是空格时，值赋为空
       value = value.trim();
-      const section = parseInt(value, 10);
-      if (isNaN(section)) {
+      const segment = parseInt(value, 10);
+      if (isNaN(segment)) {
         value = '';
       } else {
         // ip范围 0-255
         if (index <= 3) {
-          value = section < 0 ? '0' : '' + section;
-          value = section > 255 ? '255' : '' + section;
+          value = segment > 255 ? '255' : '' + segment;
         } else {
           // 端口范围 0-65535
-          value = section < 0 ? '0' : '' + section;
-          value = section > 65535 ? '65535' : '' + section;
+          value = segment > 65535 ? '65535' : '' + segment;
         }
       }
       this.$set(this.ipList, index, value);
@@ -212,12 +236,13 @@ export default {
       }
     },
     handleBlur() {
-      setTimeout(() => {
+      // nextTick等待焦点跳到下一个input
+      this.$nextTick(() => {
         // 整体blur
         const activeClassName = document.activeElement.className;
         if (activeClassName.indexOf('kd-ip-input-group__input-inner') === -1) {
           // 输入其中任意位，其他位补0
-          if (this.ipList.some((section) => section || section === '0')) {
+          if (this.ipList.some((segment) => segment || segment === '0')) {
             this.ipList.forEach((item, index) => {
               if (item === '') {
                 this.$set(this.ipList, index, '0');
@@ -227,7 +252,7 @@ export default {
           const ip = this.genIp();
           this.$emit('blur', ip);
         }
-      }, 50);
+      });
     },
   },
 };

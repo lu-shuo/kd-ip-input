@@ -1,5 +1,5 @@
 # kd-ip-input (Vue2)
-> An ip input component by vue 2.0
+> An ip input component for Vue2.x
 ## Usage
 
 ### install
@@ -12,7 +12,6 @@ npm install kd-ip-input --save
 ```javascript
 // main.js
 import KdIpInput from 'kd-ip-input';
-import 'kd-ip-input.css'
 
 Vue.use(KdIpInput)
 ```
@@ -20,7 +19,6 @@ Vue.use(KdIpInput)
 #### On demand
 ```javascript
 import KdIpInput from 'kd-ip-input';
-import 'kd-ip-input.css'
 
 new Vue({
     components: {
@@ -32,14 +30,9 @@ new Vue({
         };
     },
     methods: {
-        onIpChange(ip) {
-            console.log('ip input change:', ip);
-        },
-        onIpBlur(ip) {
-            console.log('ip input blur:', ip);
-        }
+       handleBlur(val) {}
     },
-    template: '<kd-ip-input v-model="ip" urlMode prefix="http" :on-change="onIpChange" :on-blur="onIpBlur"></kd-ip-input>'
+    template: '<kd-ip-input v-model="ip" show-prefix show-port prefix="http" @blur="handleBlur"></kd-ip-input>'
 })
 ```
 
