@@ -1,7 +1,7 @@
 /*!
  * kd-ip-input v1.0.0
- * (c) 2022 lushuo
- * @license MIT
+ * (c) 2022 Darren Lu
+ * @license ISC
  */
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 

@@ -12,8 +12,8 @@ let TARGET = process.env.TARGET
 
 const banner = `/*!
  * ${pkg.name} v${pkg.version}
- * (c) ${new Date().getFullYear()} lushuo
- * @license MIT
+ * (c) ${new Date().getFullYear()} Darren Lu
+ * @license ISC
  */`
 
 const fileName = pkg.name; // 生成文件名
