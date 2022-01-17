@@ -1,6 +1,7 @@
 # docs
 
-> ip-input for kedacom
+> An ip input component for Vue2.x
+> support prefix and port
 
 ## Build Setup
 

@@ -1,12 +1,13 @@
 # kd-ip-input (Vue2)
 > An ip input component for Vue2.x
+> support prefix and port
 ## Usage
 
 ### install
 ```bash
 npm install kd-ip-input --save
 ```
-### ES6
+### ES
 
 #### Global import
 ```javascript
