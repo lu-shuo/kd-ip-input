@@ -1,6 +1,9 @@
 # kd-ip-input (Vue2)
 > An ip input component for Vue2.x
 > support prefix and port
+
+## Demo
+[https://rookiels.github.io/kd-ip-input/](https://rookiels.github.io/kd-ip-input/)
 ## Usage
 
 ### install
