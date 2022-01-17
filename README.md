@@ -49,6 +49,6 @@ new Vue({
 | showPort | whether use port | Boolean | -- | false
 
 ### Events
-| Attribute | Description | Type |
+| Attribute | Description | params |
 |:--|:--|:--|
 | blur | triggers when the input blur | the value of the input
