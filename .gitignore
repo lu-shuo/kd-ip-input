@@ -12,3 +12,5 @@ yarn-error.log
 *.njsproj
 *.sln
 
+# test coveage result #
+tests/unit/coverage/
