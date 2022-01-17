@@ -12681,7 +12681,7 @@ process.umask = function() { return 0; };
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(1);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f2233646_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_82910e06_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(14);
 function injectStyle (ssrContext) {
   __webpack_require__(8)
 }
@@ -12701,7 +12701,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f2233646_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_82910e06_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -12722,7 +12722,7 @@ var content = __webpack_require__(9);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(11)("31d2f113", content, true, {});
+var update = __webpack_require__(11)("b6ace150", content, true, {});
 
 /***/ }),
 /* 9 */
@@ -13195,7 +13195,7 @@ module.exports = function normalizeComponent (
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("only ip")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ip = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{on:{"blur":_vm.handleBlur},model:{value:(_vm.ip),callback:function ($$v) {_vm.ip=$$v},expression:"ip"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ip ? _vm.ip : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show Prefix")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPrefix = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"prefix":_vm.prefix,"show-prefix":""},model:{value:(_vm.ipWithPrefix),callback:function ($$v) {_vm.ipWithPrefix=$$v},expression:"ipWithPrefix"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPrefix ? _vm.ipWithPrefix : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show port")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPort = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"show-port":""},model:{value:(_vm.ipWithPort),callback:function ($$v) {_vm.ipWithPort=$$v},expression:"ipWithPort"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPort ? _vm.ipWithPort : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show Prefix and Port")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPrefixAndPort = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"prefix":_vm.prefix,"show-prefix":"","show-port":""},model:{value:(_vm.ipWithPrefixAndPort),callback:function ($$v) {_vm.ipWithPrefixAndPort=$$v},expression:"ipWithPrefixAndPort"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPrefixAndPort ? _vm.ipWithPrefixAndPort : 'void string'))])])])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("only ip")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ip = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{on:{"blur":_vm.handleBlur},model:{value:(_vm.ip),callback:function ($$v) {_vm.ip=$$v},expression:"ip"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ip ? _vm.ip : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show prefix")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPrefix = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"prefix":_vm.prefix,"show-prefix":""},model:{value:(_vm.ipWithPrefix),callback:function ($$v) {_vm.ipWithPrefix=$$v},expression:"ipWithPrefix"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPrefix ? _vm.ipWithPrefix : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show port")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPort = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"show-port":""},model:{value:(_vm.ipWithPort),callback:function ($$v) {_vm.ipWithPort=$$v},expression:"ipWithPort"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPort ? _vm.ipWithPort : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show prefix and port")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPrefixAndPort = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"prefix":_vm.prefix,"show-prefix":"","show-port":""},model:{value:(_vm.ipWithPrefixAndPort),callback:function ($$v) {_vm.ipWithPrefixAndPort=$$v},expression:"ipWithPrefixAndPort"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPrefixAndPort ? _vm.ipWithPrefixAndPort : 'void string'))])])])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

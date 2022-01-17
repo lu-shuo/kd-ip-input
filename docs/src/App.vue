@@ -15,7 +15,7 @@
     </div>
     <div class="box">
       <div class="title">
-        <h1>show Prefix</h1>
+        <h1>show prefix</h1>
         <button @click="ipWithPrefix = ''">reset</button>
       </div>
       <div class="wrapper">
@@ -42,7 +42,7 @@
     </div>
     <div class="box">
       <div class="title">
-        <h1>show Prefix and Port</h1>
+        <h1>show prefix and port</h1>
         <button @click="ipWithPrefixAndPort = ''">reset</button>
       </div>
       <div class="wrapper">
