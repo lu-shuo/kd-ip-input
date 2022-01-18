@@ -121,7 +121,13 @@ export default {
   mounted() {
     this.init(this.value);
   },
+  beforeDestroy() {
+    this.resetField();
+  },
   methods: {
+    resetField() {
+      this.isEmptyOnBlur = false;
+    },
     // 回显ip
     init(ip) {
       if (!ip) {
