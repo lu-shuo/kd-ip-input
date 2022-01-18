@@ -6,7 +6,7 @@
 [https://rookiels.github.io/kd-ip-input/](https://rookiels.github.io/kd-ip-input/)
 ## Usage
 
-### install
+### Install
 ```bash
 npm install kd-ip-input --save
 ```
@@ -47,6 +47,7 @@ new Vue({
 | prefix | network protocol (required when showPrefix) | String | http/https/wss/ws | --
 | showPrefix | whether use prefix | Boolean | -- | false
 | showPort | whether use port | Boolean | -- | false
+| disabled | whether input is disabled | Boolean | -- | false
 
 ### Events
 | Event Name | Description | Parameters |

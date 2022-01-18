@@ -13206,8 +13206,8 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /* WEBPACK VAR INJECTION */(function(global) {/*!
  * kd-ip-input v1.0.0
- * (c) 2022 lushuo
- * @license MIT
+ * (c) 2022 Darren Lu
+ * @license ISC
  */
 !function (t, n) {
    true ? module.exports = n() : "function" == typeof define && define.amd ? define(n) : (t = "undefined" != typeof globalThis ? globalThis : t || self).kdIpInput = n();
@@ -13286,11 +13286,11 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
     return "String" == $(t) ? N(t, "") : R(t);
   } : R,
       z = s.TypeError,
-      D = function (t) {
+      B = function (t) {
     if (null == t) throw z("Can't call method on " + t);return t;
   },
-      A = F,
-      B = D,
+      D = F,
+      A = B,
       M = h,
       V = function (t) {
     return "object" == typeof t ? null !== t : M(t);
@@ -13358,7 +13358,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
       Ot = "__core-js_shared__",
       St = s[Ot] || jt(Ot, {});(xt.exports = function (t, n) {
     return St[t] || (St[t] = void 0 !== n ? n : {});
-  })("versions", []).push({ version: "3.20.2", mode: "pure", copyright: "© 2022 Denis Pushkarev (zloirock.ru)" });var Et = D,
+  })("versions", []).push({ version: "3.20.2", mode: "pure", copyright: "© 2022 Denis Pushkarev (zloirock.ru)" });var Et = B,
       Ct = s.Object,
       Tt = function (t) {
     return Ct(Et(t));
@@ -13372,16 +13372,16 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
       Nt = 0,
       Ft = Math.random(),
       zt = Rt(1..toString),
-      Dt = s,
-      At = xt.exports,
-      Bt = $t,
+      Bt = s,
+      Dt = xt.exports,
+      At = $t,
       Mt = function (t) {
     return "Symbol(" + (void 0 === t ? "" : t) + ")_" + zt(++Nt + Ft, 36);
   },
       Vt = rt,
       Ut = ot,
-      Yt = At("wks"),
-      Kt = Dt.Symbol,
+      Yt = Dt("wks"),
+      Kt = Bt.Symbol,
       Wt = Kt && Kt.for,
       Xt = Ut ? Kt : Kt && Kt.withoutSetter || Mt,
       qt = m,
@@ -13394,8 +13394,8 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
     var e, i;if ("string" === n && mt(e = t.toString) && !wt(i = yt(e, t))) return i;if (mt(e = t.valueOf) && !wt(i = yt(e, t))) return i;if ("string" !== n && mt(e = t.toString) && !wt(i = yt(e, t))) return i;throw _t("Can't convert object to primitive value");
   },
       Zt = function (t) {
-    if (!Bt(Yt, t) || !Vt && "string" != typeof Yt[t]) {
-      var n = "Symbol." + t;Vt && Bt(Kt, t) ? Yt[t] = Kt[t] : Yt[t] = Ut && Wt ? Wt(n) : Xt(n);
+    if (!At(Yt, t) || !Vt && "string" != typeof Yt[t]) {
+      var n = "Symbol." + t;Vt && At(Kt, t) ? Yt[t] = Kt[t] : Yt[t] = Ut && Wt ? Wt(n) : Xt(n);
     }return Yt[t];
   },
       tn = s.TypeError,
@@ -13426,7 +13426,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
       fn = w,
       hn = O,
       gn = function (t) {
-    return A(B(t));
+    return D(A(t));
   },
       bn = on,
       vn = $t,
@@ -13459,9 +13459,9 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
       Nn = $n.String,
       Fn = $n.TypeError,
       zn = v,
-      Dn = cn,
-      An = In,
-      Bn = function (t) {
+      Bn = cn,
+      Dn = In,
+      An = function (t) {
     if (Rn(t)) return t;throw Fn(Nn(t) + " is not an object");
   },
       Mn = on,
@@ -13470,12 +13470,12 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
       Yn = Object.getOwnPropertyDescriptor,
       Kn = "enumerable",
       Wn = "configurable",
-      Xn = "writable";Ln.f = zn ? An ? function (t, n, e) {
-    if (Bn(t), n = Mn(n), Bn(e), "function" == typeof t && "prototype" === n && "value" in e && Xn in e && !e.writable) {
+      Xn = "writable";Ln.f = zn ? Dn ? function (t, n, e) {
+    if (An(t), n = Mn(n), An(e), "function" == typeof t && "prototype" === n && "value" in e && Xn in e && !e.writable) {
       var i = Yn(t, n);i && i.writable && (t[n] = e.value, e = { configurable: Wn in e ? e.configurable : i.configurable, enumerable: Kn in e ? e.enumerable : i.enumerable, writable: !1 });
     }return Un(t, n, e);
   } : Un : function (t, n, e) {
-    if (Bn(t), n = Mn(n), Bn(e), Dn) try {
+    if (An(t), n = Mn(n), An(e), Bn) try {
       return Un(t, n, e);
     } catch (t) {}if ("get" in e || "set" in e) throw Vn("Accessors not supported");return "value" in e && (t[n] = e.value), t;
   };var qn = Ln,
@@ -13578,7 +13578,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
     return je[t + "Prototype"];
   })("Array").reduce;var Se = { name: "kd-ip-input", props: { value: { type: String, required: !0, default: "" }, prefix: { type: String, validator: function (t) {
           return -1 !== ["http", "https", "wss", "ws"].indexOf(t);
-        } }, showPrefix: { type: Boolean, default: !1 }, showPort: { type: Boolean, default: !1 } }, data() {
+        } }, showPrefix: { type: Boolean, default: !1 }, showPort: { type: Boolean, default: !1 }, disabled: { type: Boolean, default: !1 } }, data() {
       return { ipList: this.showPort ? ["", "", "", "", ""] : ["", "", "", ""] };
     }, computed: { liWidth() {
         return this.showPort ? "20%" : "25%";
@@ -13634,11 +13634,11 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
       var i = document.head || document.getElementsByTagName("head")[0],
           r = document.createElement("style");r.type = "text/css", "top" === e && i.firstChild ? i.insertBefore(r, i.firstChild) : i.appendChild(r), r.styleSheet ? r.styleSheet.cssText = t : r.appendChild(document.createTextNode(t));
     }
-  }('@charset "UTF-8";\n.kd-ip-input-group[data-v-f7aa942e] {\n  line-height: normal;\n  display: inline-table;\n  width: 100%;\n  border-collapse: separate;\n  border-spacing: 0;\n  position: relative;\n  font-size: 14px;\n}\n.kd-ip-input-group .kd-ip-input-group__prepend[data-v-f7aa942e] {\n  background-color: #f5f7fa;\n  color: #909399;\n  vertical-align: middle;\n  display: table-cell;\n  position: relative;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  border-right: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  padding: 0 20px;\n  width: 1px;\n  white-space: nowrap;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group[data-v-f7aa942e] {\n  width: 100%;\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  color: #606266;\n  display: flex;\n  align-items: center;\n  font-size: inherit;\n  outline: none;\n  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-li[data-v-f7aa942e] {\n  height: 32px;\n  line-height: 32px;\n  list-style: none;\n  position: relative;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-li .kd-ip-input-group__dot[data-v-f7aa942e] {\n  width: 5px;\n  height: 5px;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  right: 0;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-li .kd-ip-input-group__colon[data-v-f7aa942e] {\n  width: 5px;\n  height: 15px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-li .kd-ip-input-group__colon .dot[data-v-f7aa942e] {\n  width: 4px;\n  height: 4px;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-inner[data-v-f7aa942e] {\n  width: 100%;\n  height: 32px;\n  border: none;\n  text-align: center;\n  background: transparent;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-inner[data-v-f7aa942e]:focus {\n  outline: none;\n  /*取消掉默认的input focus状态*/\n}');const Ce = Se;var Te = function () {
+  }('@charset "UTF-8";\n.is-disabled[data-v-67bac5c6] {\n  background-color: #f5f7fa !important;\n  border-color: #e4e7ed !important;\n  cursor: not-allowed;\n}\n.is-disabled-input[data-v-67bac5c6] {\n  cursor: not-allowed;\n  color: #c0c4cc !important;\n}\n.kd-ip-input-group[data-v-67bac5c6] {\n  line-height: normal;\n  display: inline-table;\n  width: 100%;\n  border-collapse: separate;\n  border-spacing: 0;\n  position: relative;\n  font-size: 14px;\n}\n.kd-ip-input-group .kd-ip-input-group__prepend[data-v-67bac5c6] {\n  background-color: #f5f7fa;\n  color: #909399;\n  vertical-align: middle;\n  display: table-cell;\n  position: relative;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  border-right: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  padding: 0 20px;\n  width: 1px;\n  white-space: nowrap;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul[data-v-67bac5c6] {\n  width: 100%;\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  display: flex;\n  align-items: center;\n  font-size: inherit;\n  outline: none;\n  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li[data-v-67bac5c6] {\n  height: 32px;\n  line-height: 32px;\n  list-style: none;\n  position: relative;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__dot[data-v-67bac5c6] {\n  width: 5px;\n  height: 5px;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  right: 0;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon[data-v-67bac5c6] {\n  width: 5px;\n  height: 15px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon .dot[data-v-67bac5c6] {\n  width: 4px;\n  height: 4px;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-67bac5c6] {\n  width: 100%;\n  height: 32px;\n  border: none;\n  color: #606266;\n  text-align: center;\n  background: transparent;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-67bac5c6]:focus {\n  outline: none;\n  /*取消掉默认的input focus状态*/\n}');const Ce = Se;var Te = function () {
     var t = this,
         n = t.$createElement,
-        e = t._self._c || n;return e("div", { staticClass: "kd-ip-input-group" }, [t.showPrefix ? e("div", { staticClass: "kd-ip-input-group__prepend" }, [t._v(t._s(t._f("prefixFormat")(t.prefix)))]) : t._e(), t._v(" "), e("ul", { staticClass: "kd-ip-input-group__input-group" }, t._l(t.ipList, function (n, i) {
-      return e("li", { key: i, staticClass: "kd-ip-input-group__input-li", style: { width: t.liWidth } }, [e("input", { ref: "ipInput", refInFor: !0, staticClass: "kd-ip-input-group__input-inner", attrs: { placeholder: "", autocomplete: "off" }, domProps: { value: n }, on: { input: function (n) {
+        e = t._self._c || n;return e("div", { staticClass: "kd-ip-input-group" }, [t.showPrefix ? e("div", { staticClass: "kd-ip-input-group__prepend" }, [t._v(t._s(t._f("prefixFormat")(t.prefix)))]) : t._e(), t._v(" "), e("ul", { staticClass: "kd-ip-input-group__input-ul" }, t._l(t.ipList, function (n, i) {
+      return e("li", { key: i, staticClass: "kd-ip-input-group__input-li", class: { "is-disabled": t.disabled }, style: { width: t.liWidth } }, [e("input", { ref: "ipInput", refInFor: !0, staticClass: "kd-ip-input-group__input-inner", class: { "is-disabled-input": t.disabled }, attrs: { placeholder: "", autocomplete: "off", disabled: t.disabled }, domProps: { value: n }, on: { input: function (n) {
             return t.handleInput(n, i);
           }, keydown: function (n) {
             return t.handleKeyDown(n, i);
@@ -13646,7 +13646,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
             return t.handleBlur(n, i);
           } } }), t._v(" "), i < 3 ? e("div", { staticClass: "kd-ip-input-group__dot" }) : t._e(), t._v(" "), 5 === t.ipList.length && 4 === i ? e("div", { staticClass: "kd-ip-input-group__colon" }, [e("div", { staticClass: "dot" }), t._v(" "), e("div", { staticClass: "dot" })]) : t._e()]);
     }), 0)]);
-  };Te._withStripped = !0;const Le = Ee({ render: Te, staticRenderFns: [] }, undefined, Ce, "data-v-f7aa942e", false, undefined, !1, void 0, void 0, void 0);var Ie = function (t) {
+  };Te._withStripped = !0;const Le = Ee({ render: Te, staticRenderFns: [] }, undefined, Ce, "data-v-67bac5c6", false, undefined, !1, void 0, void 0, void 0);var Ie = function (t) {
     t.component(Le.name, Le);
   };return "undefined" != typeof window && window.Vue && Ie(window.Vue), Ie;
 });

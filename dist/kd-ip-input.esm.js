@@ -874,6 +874,10 @@ var script = {
       type: Boolean,
       default: false,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -1091,7 +1095,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "@charset \"UTF-8\";\n.kd-ip-input-group[data-v-f7aa942e] {\n  line-height: normal;\n  display: inline-table;\n  width: 100%;\n  border-collapse: separate;\n  border-spacing: 0;\n  position: relative;\n  font-size: 14px;\n}\n.kd-ip-input-group .kd-ip-input-group__prepend[data-v-f7aa942e] {\n  background-color: #f5f7fa;\n  color: #909399;\n  vertical-align: middle;\n  display: table-cell;\n  position: relative;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  border-right: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  padding: 0 20px;\n  width: 1px;\n  white-space: nowrap;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group[data-v-f7aa942e] {\n  width: 100%;\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  color: #606266;\n  display: flex;\n  align-items: center;\n  font-size: inherit;\n  outline: none;\n  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-li[data-v-f7aa942e] {\n  height: 32px;\n  line-height: 32px;\n  list-style: none;\n  position: relative;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-li .kd-ip-input-group__dot[data-v-f7aa942e] {\n  width: 5px;\n  height: 5px;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  right: 0;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-li .kd-ip-input-group__colon[data-v-f7aa942e] {\n  width: 5px;\n  height: 15px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-li .kd-ip-input-group__colon .dot[data-v-f7aa942e] {\n  width: 4px;\n  height: 4px;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-inner[data-v-f7aa942e] {\n  width: 100%;\n  height: 32px;\n  border: none;\n  text-align: center;\n  background: transparent;\n}\n.kd-ip-input-group .kd-ip-input-group__input-group .kd-ip-input-group__input-inner[data-v-f7aa942e]:focus {\n  outline: none;\n  /*取消掉默认的input focus状态*/\n}";
+var css_248z = "@charset \"UTF-8\";\n.is-disabled[data-v-67bac5c6] {\n  background-color: #f5f7fa !important;\n  border-color: #e4e7ed !important;\n  cursor: not-allowed;\n}\n.is-disabled-input[data-v-67bac5c6] {\n  cursor: not-allowed;\n  color: #c0c4cc !important;\n}\n.kd-ip-input-group[data-v-67bac5c6] {\n  line-height: normal;\n  display: inline-table;\n  width: 100%;\n  border-collapse: separate;\n  border-spacing: 0;\n  position: relative;\n  font-size: 14px;\n}\n.kd-ip-input-group .kd-ip-input-group__prepend[data-v-67bac5c6] {\n  background-color: #f5f7fa;\n  color: #909399;\n  vertical-align: middle;\n  display: table-cell;\n  position: relative;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  border-right: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  padding: 0 20px;\n  width: 1px;\n  white-space: nowrap;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul[data-v-67bac5c6] {\n  width: 100%;\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  display: flex;\n  align-items: center;\n  font-size: inherit;\n  outline: none;\n  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li[data-v-67bac5c6] {\n  height: 32px;\n  line-height: 32px;\n  list-style: none;\n  position: relative;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__dot[data-v-67bac5c6] {\n  width: 5px;\n  height: 5px;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  right: 0;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon[data-v-67bac5c6] {\n  width: 5px;\n  height: 15px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon .dot[data-v-67bac5c6] {\n  width: 4px;\n  height: 4px;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-67bac5c6] {\n  width: 100%;\n  height: 32px;\n  border: none;\n  color: #606266;\n  text-align: center;\n  background: transparent;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-67bac5c6]:focus {\n  outline: none;\n  /*取消掉默认的input focus状态*/\n}";
 styleInject(css_248z);
 
 function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
@@ -1185,13 +1189,14 @@ var __vue_render__ = function () {
     _vm._v(" "),
     _c(
       "ul",
-      { staticClass: "kd-ip-input-group__input-group" },
+      { staticClass: "kd-ip-input-group__input-ul" },
       _vm._l(_vm.ipList, function (segment, index) {
         return _c(
           "li",
           {
             key: index,
             staticClass: "kd-ip-input-group__input-li",
+            class: { "is-disabled": _vm.disabled },
             style: { width: _vm.liWidth },
           },
           [
@@ -1199,7 +1204,12 @@ var __vue_render__ = function () {
               ref: "ipInput",
               refInFor: true,
               staticClass: "kd-ip-input-group__input-inner",
-              attrs: { placeholder: "", autocomplete: "off" },
+              class: { "is-disabled-input": _vm.disabled },
+              attrs: {
+                placeholder: "",
+                autocomplete: "off",
+                disabled: _vm.disabled,
+              },
               domProps: { value: segment },
               on: {
                 input: function ($event) {
@@ -1238,7 +1248,7 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = undefined;
   /* scoped */
-  const __vue_scope_id__ = "data-v-f7aa942e";
+  const __vue_scope_id__ = "data-v-67bac5c6";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */

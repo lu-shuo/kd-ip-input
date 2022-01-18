@@ -4,12 +4,13 @@
       class="kd-ip-input-group__prepend"
       v-if="showPrefix"
     >{{prefix | prefixFormat}}</div>
-    <ul class="kd-ip-input-group__input-group">
+    <ul class="kd-ip-input-group__input-ul">
       <li
         v-for="(segment,index) in ipList"
         class="kd-ip-input-group__input-li"
         :key="index"
         :style="{width: liWidth}"
+        :class="{'is-disabled': disabled}"
       >
         <input
           ref="ipInput"
@@ -17,6 +18,8 @@
           placeholder=""
           autocomplete="off"
           :value="segment"
+          :disabled='disabled'
+          :class="{'is-disabled-input': disabled}"
           @input="handleInput($event, index)"
           @keydown="handleKeyDown($event, index)"
           @blur="handleBlur($event, index)"
@@ -39,7 +42,7 @@
 </template>
 
 <script>
-import { getCursorPosition, calItemNumInArray } from './utils';
+import { getCursorPosition } from './utils';
 
 export default {
   name: 'kd-ip-input',
@@ -64,6 +67,10 @@ export default {
     },
     showPort: {
       // 是否开启端口
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
       type: Boolean,
       default: false,
     },
@@ -261,6 +268,15 @@ export default {
 <style lang="scss" scoped>
 $dotColor: #dcdfe6;
 
+.is-disabled {
+  background-color: #f5f7fa !important;
+  border-color: #e4e7ed !important;
+  cursor: not-allowed;
+}
+.is-disabled-input {
+  cursor: not-allowed;
+  color: #c0c4cc !important;
+}
 .kd-ip-input-group {
   line-height: normal;
   display: inline-table;
@@ -284,7 +300,7 @@ $dotColor: #dcdfe6;
     width: 1px;
     white-space: nowrap;
   }
-  .kd-ip-input-group__input-group {
+  .kd-ip-input-group__input-ul {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -293,7 +309,6 @@ $dotColor: #dcdfe6;
     background-image: none;
     border: 1px solid #dcdfe6;
     border-radius: 4px;
-    color: #606266;
     display: flex;
     align-items: center;
     font-size: inherit;
@@ -337,6 +352,7 @@ $dotColor: #dcdfe6;
       width: 100%;
       height: 32px;
       border: none;
+      color: #606266;
       text-align: center;
       background: transparent;
       &:focus {
