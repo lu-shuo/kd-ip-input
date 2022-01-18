@@ -17,7 +17,7 @@ describe('mount', () => {
     expect(wrapper.exists()).toBe(true);
     // 渲染input容器
     const ul = wrapper.find('ul');
-    expect(ul.attributes('class')).toBe('kd-ip-input-group__input-group');
+    expect(ul.attributes('class')).toBe('kd-ip-input-group__input-ul');
     // 渲染4个segment
     const liArray = ul.findAll('li');
     expect(liArray.length).toBe(4);
@@ -43,7 +43,7 @@ describe('mount', () => {
     expect(wrapper.find('div .kd-ip-input-group__prepend').text()).toBe('http://');
     // 渲染input容器
     const ul = wrapper.find('ul');
-    expect(ul.attributes('class')).toBe('kd-ip-input-group__input-group');
+    expect(ul.attributes('class')).toBe('kd-ip-input-group__input-ul');
     // 渲染4个segment
     expect(ul.findAll('li').length).toBe(4);
     expect(ul.find('li').attributes('class')).toBe('kd-ip-input-group__input-li');
@@ -64,7 +64,7 @@ describe('mount', () => {
     expect(wrapper.exists()).toBe(true);
     // 渲染input容器
     const ul = wrapper.find('ul');
-    expect(ul.attributes('class')).toBe('kd-ip-input-group__input-group');
+    expect(ul.attributes('class')).toBe('kd-ip-input-group__input-ul');
     // 渲染5个segment
     expect(ul.findAll('li').length).toBe(5);
     expect(ul.find('li').attributes('class')).toBe('kd-ip-input-group__input-li');
@@ -91,7 +91,7 @@ describe('mount', () => {
     expect(wrapper.find('div .kd-ip-input-group__prepend').exists()).toBe(true);
     // 渲染input容器
     const ul = wrapper.find('ul');
-    expect(ul.attributes('class')).toBe('kd-ip-input-group__input-group');
+    expect(ul.attributes('class')).toBe('kd-ip-input-group__input-ul');
     // 渲染5个segment
     expect(ul.findAll('li').length).toBe(5);
     expect(ul.find('li').attributes('class')).toBe('kd-ip-input-group__input-li');
@@ -104,6 +104,26 @@ describe('mount', () => {
     expect(ul.findAll('div .kd-ip-input-group__dot').length).toBe(3);
     // 渲染端口分割冒号
     expect(wrapper.find('div .kd-ip-input-group__colon').exists()).toBe(true);
+    wrapper.destroy();
+  });
+
+  it('test disabled', () => {
+    const wrapper = factory({ value: '', disabled: true });
+    // 判断组件是否挂载
+    expect(wrapper.exists()).toBe(true);
+    // 渲染input容器
+    const ul = wrapper.find('ul');
+    expect(ul.attributes('class')).toBe('kd-ip-input-group__input-ul');
+    // 渲染4个segment
+    const liArray = ul.findAll('li');
+    expect(liArray.length).toBe(4);
+    expect(ul.find('li').attributes('class')).toBe('kd-ip-input-group__input-li is-disabled');
+    expect(ul.find('li').attributes('style')).toBe('width: 25%;');
+    // 渲染input
+    expect(ul.findAll('input').length).toBe(4);
+    expect(ul.find('input').attributes('class')).toBe('kd-ip-input-group__input-inner is-disabled-input');
+    // 渲染分割点
+    expect(ul.findAll('div .kd-ip-input-group__dot').length).toBe(3);
     wrapper.destroy();
   });
 });
