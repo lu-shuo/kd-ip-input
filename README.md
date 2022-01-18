@@ -42,20 +42,19 @@ new Vue({
 ### Check (with element form)
 ```vue
 <template>
-<el-form :model="form" :rule="rules" ref="form"> 
-    <el-form-item
-        label="IP地址："
-        prop="ipv4"
-        required
-    >
-        <kd-ip-input
-            v-model="form.ipv4"
-            check-empty-on-blur
-            @blur="$refs.form.validateField('ipv4')"
-        />
-    </el-form-item>
-</el-form>
-
+    <el-form :model="form" :rule="rules" ref="form"> 
+        <el-form-item
+            label="IP地址："
+            prop="ipv4"
+            required
+        >
+            <kd-ip-input
+                v-model="form.ipv4"
+                check-empty-on-blur
+                @blur="$refs.form.validateField('ipv4')"
+            />
+        </el-form-item>
+    </el-form>
 </template>
 
 <script>
@@ -74,7 +73,6 @@ export default {
     }
 }
 </script>
-
 ```
 ### Attributes
 | Attribute | Description | Type | Accepted Values | Default
