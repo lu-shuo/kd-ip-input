@@ -302,6 +302,7 @@ $dotColor: #dcdfe6;
   }
   .kd-ip-input-group__input-ul {
     width: 100%;
+    height: 32px;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -315,8 +316,8 @@ $dotColor: #dcdfe6;
     outline: none;
     transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
     .kd-ip-input-group__input-li {
-      height: 32px;
-      line-height: 32px;
+      height: 100%;
+      line-height: 100%;
       list-style: none;
       position: relative;
       .kd-ip-input-group__dot {
@@ -350,7 +351,7 @@ $dotColor: #dcdfe6;
     }
     .kd-ip-input-group__input-inner {
       width: 100%;
-      height: 32px;
+      height: 100%;
       border: none;
       color: #606266;
       text-align: center;
