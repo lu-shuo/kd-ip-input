@@ -8,6 +8,7 @@
       <div class="wrapper">
         <kd-ip-input
           v-model="ip"
+          check-empty-on-blur
           @blur="handleBlur"
         />
       </div>

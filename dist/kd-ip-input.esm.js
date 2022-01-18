@@ -878,10 +878,15 @@ var script = {
       type: Boolean,
       default: false,
     },
+    checkEmptyOnBlur: {
+      type: Boolean,
+      default: false,
+    }
   },
   data() {
     return {
       ipList: this.showPort ? ['', '', '', '', ''] : ['', '', '', ''],
+      isEmptyOnBlur: false,
     };
   },
   computed: {
@@ -973,10 +978,11 @@ var script = {
         }
       }
     },
-    genIp() {
+    genIp(onBlur = false) {
       const ipList = this.ipList;
       let ip;
       if (ipList.every((segment) => segment !== '')) {
+        if (onBlur) this.isEmptyOnBlur = false;
         const tempList = ipList.slice(0, 4);
         // 添加前缀
         ip =
@@ -987,6 +993,7 @@ var script = {
         ip = this.showPort ? ip + ':' + ipList[4] : ip;
       } else {
         ip = '';
+        if (onBlur) this.isEmptyOnBlur = true;
       }
       return ip;
     },
@@ -1060,7 +1067,7 @@ var script = {
               }
             });
           }
-          const ip = this.genIp();
+          const ip = this.genIp(true);
           this.$emit('blur', ip);
         }
       });
@@ -1095,7 +1102,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "@charset \"UTF-8\";\n.is-disabled[data-v-7f86d390] {\n  background-color: #f5f7fa !important;\n  border-color: #e4e7ed !important;\n  cursor: not-allowed;\n}\n.is-disabled-input[data-v-7f86d390] {\n  cursor: not-allowed;\n  color: #c0c4cc !important;\n}\n.kd-ip-input-group[data-v-7f86d390] {\n  line-height: normal;\n  display: inline-table;\n  width: 100%;\n  border-collapse: separate;\n  border-spacing: 0;\n  position: relative;\n  font-size: 14px;\n}\n.kd-ip-input-group .kd-ip-input-group__prepend[data-v-7f86d390] {\n  background-color: #f5f7fa;\n  color: #909399;\n  vertical-align: middle;\n  display: table-cell;\n  position: relative;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  border-right: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  padding: 0 20px;\n  width: 1px;\n  white-space: nowrap;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul[data-v-7f86d390] {\n  width: 100%;\n  height: 32px;\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  display: flex;\n  align-items: center;\n  font-size: inherit;\n  outline: none;\n  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li[data-v-7f86d390] {\n  height: 100%;\n  line-height: 100%;\n  list-style: none;\n  position: relative;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__dot[data-v-7f86d390] {\n  width: 5px;\n  height: 5px;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  right: 0;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon[data-v-7f86d390] {\n  width: 5px;\n  height: 15px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon .dot[data-v-7f86d390] {\n  width: 4px;\n  height: 4px;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-7f86d390] {\n  width: 100%;\n  height: 100%;\n  border: none;\n  color: #606266;\n  text-align: center;\n  background: transparent;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-7f86d390]:focus {\n  outline: none;\n  /*取消掉默认的input focus状态*/\n}";
+var css_248z = "@charset \"UTF-8\";\n.is-disabled[data-v-2630c8a3] {\n  background-color: #f5f7fa !important;\n  border-color: #e4e7ed !important;\n  cursor: not-allowed;\n}\n.is-disabled-input[data-v-2630c8a3] {\n  cursor: not-allowed;\n  color: #c0c4cc !important;\n}\n.is-empty[data-v-2630c8a3] {\n  border: 1px solid #f56c6c !important;\n}\n.kd-ip-input-group[data-v-2630c8a3] {\n  line-height: normal;\n  display: inline-table;\n  width: 100%;\n  border-collapse: separate;\n  border-spacing: 0;\n  position: relative;\n  font-size: 14px;\n}\n.kd-ip-input-group .kd-ip-input-group__prepend[data-v-2630c8a3] {\n  background-color: #f5f7fa;\n  color: #909399;\n  vertical-align: middle;\n  display: table-cell;\n  position: relative;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  border-right: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  padding: 0 20px;\n  width: 1px;\n  white-space: nowrap;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul[data-v-2630c8a3] {\n  width: 100%;\n  height: 32px;\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  display: flex;\n  align-items: center;\n  font-size: inherit;\n  outline: none;\n  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li[data-v-2630c8a3] {\n  height: 100%;\n  line-height: 100%;\n  list-style: none;\n  position: relative;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__dot[data-v-2630c8a3] {\n  width: 5px;\n  height: 5px;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  right: 0;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon[data-v-2630c8a3] {\n  width: 5px;\n  height: 15px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon .dot[data-v-2630c8a3] {\n  width: 4px;\n  height: 4px;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-2630c8a3] {\n  width: 100%;\n  height: 100%;\n  border: none;\n  color: #606266;\n  text-align: center;\n  background: transparent;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-2630c8a3]:focus {\n  outline: none;\n  /*取消掉默认的input focus状态*/\n}";
 styleInject(css_248z);
 
 function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
@@ -1189,7 +1196,10 @@ var __vue_render__ = function () {
     _vm._v(" "),
     _c(
       "ul",
-      { staticClass: "kd-ip-input-group__input-ul" },
+      {
+        staticClass: "kd-ip-input-group__input-ul",
+        class: { "is-empty": _vm.checkEmptyOnBlur && _vm.isEmptyOnBlur },
+      },
       _vm._l(_vm.ipList, function (segment, index) {
         return _c(
           "li",
@@ -1248,7 +1258,7 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = undefined;
   /* scoped */
-  const __vue_scope_id__ = "data-v-7f86d390";
+  const __vue_scope_id__ = "data-v-2630c8a3";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */

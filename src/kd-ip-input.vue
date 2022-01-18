@@ -4,7 +4,7 @@
       class="kd-ip-input-group__prepend"
       v-if="showPrefix"
     >{{prefix | prefixFormat}}</div>
-    <ul class="kd-ip-input-group__input-ul">
+    <ul class="kd-ip-input-group__input-ul" :class="{'is-empty': checkEmptyOnBlur && isEmptyOnBlur}">
       <li
         v-for="(segment,index) in ipList"
         class="kd-ip-input-group__input-li"
@@ -74,10 +74,15 @@ export default {
       type: Boolean,
       default: false,
     },
+    checkEmptyOnBlur: {
+      type: Boolean,
+      default: false,
+    }
   },
   data() {
     return {
       ipList: this.showPort ? ['', '', '', '', ''] : ['', '', '', ''],
+      isEmptyOnBlur: false,
     };
   },
   computed: {
@@ -169,10 +174,11 @@ export default {
         }
       }
     },
-    genIp() {
+    genIp(onBlur = false) {
       const ipList = this.ipList;
       let ip;
       if (ipList.every((segment) => segment !== '')) {
+        if (onBlur) this.isEmptyOnBlur = false;
         const tempList = ipList.slice(0, 4);
         // 添加前缀
         ip =
@@ -183,6 +189,7 @@ export default {
         ip = this.showPort ? ip + ':' + ipList[4] : ip;
       } else {
         ip = '';
+        if (onBlur) this.isEmptyOnBlur = true;
       }
       return ip;
     },
@@ -256,7 +263,7 @@ export default {
               }
             });
           }
-          const ip = this.genIp();
+          const ip = this.genIp(true);
           this.$emit('blur', ip);
         }
       });
@@ -276,6 +283,9 @@ $dotColor: #dcdfe6;
 .is-disabled-input {
   cursor: not-allowed;
   color: #c0c4cc !important;
+}
+.is-empty {
+  border: 1px solid #f56c6c!important;
 }
 .kd-ip-input-group {
   line-height: normal;
