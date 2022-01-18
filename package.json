@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "ip input for Vue2",
   "main": "dist/kd-ip-input.min.js",
-  "files": ["/dist", "/src", "/tests", "LICENSE", "README.md"],
+  "files": ["/dist", "/src", "LICENSE", "README.md"],
   "scripts": {
     "dev": "npm run dev:esm",
     "dev:esm": "rollup -w -c --sourcemap --environment TARGET:dev-esm",
