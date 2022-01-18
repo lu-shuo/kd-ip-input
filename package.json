@@ -1,9 +1,9 @@
 {
   "name": "kd-ip-input",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An ip input for Vue2",
   "main": "dist/kd-ip-input.min.js",
-  "files": ["/dist", "/src", "LICENSE", "README.md"],
+  "files": ["/dist", "LICENSE", "README.md"],
   "scripts": {
     "dev": "npm run dev:esm",
     "dev:esm": "rollup -w -c --sourcemap --environment TARGET:dev-esm",
