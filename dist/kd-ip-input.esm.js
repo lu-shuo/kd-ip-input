@@ -1,5 +1,5 @@
 /*!
- * kd-ip-input v1.0.2
+ * kd-ip-input v1.0.3
  * (c) 2022 Darren Lu
  * @license ISC
  */
