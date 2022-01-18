@@ -1,6 +1,6 @@
 {
   "name": "kd-ip-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ip input for Vue2",
   "main": "dist/kd-ip-input.min.js",
   "files": ["/dist", "/src", "LICENSE", "README.md"],
