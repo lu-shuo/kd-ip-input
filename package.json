@@ -1,11 +1,15 @@
 {
   "name": "kd-ip-input",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "An ip input for Vue2",
   "main": "dist/kd-ip-input.min.js",
-  "files": ["/dist", "LICENSE", "README.md"],
+  "files": [
+    "/dist",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
-    "dev": "npm run dev:esm",
+    "dev": "rollup -w -c --environment TARGET:dev-umd",
     "dev:esm": "rollup -w -c --sourcemap --environment TARGET:dev-esm",
     "dev:cjs": "rollup -w -c --sourcemap --environment TARGET:dev-cjs",
     "build": "npm run clean && rollup -c --environment TARGET:prod-umd",

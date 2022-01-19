@@ -2,7 +2,7 @@
 import KdIpInput from '../../src/kd-ip-input.vue';
 import { shallowMount } from '@vue/test-utils';
 import Vue from 'vue/dist/vue.min';
-import { flushPromise } from '../utils';
+import { flushPromise, setValue, triggerKey } from '../utils';
 
 const factory = (propsData) => {
   return shallowMount(KdIpInput, {
@@ -188,7 +188,7 @@ let blurIp = null;
 
 const vmFactory = props => {
   const vm = new Vue({
-    template: '<div><kd-ip-input v-model="ip" :show-prefix="showPrefix" :show-port="showPort" :prefix="prefix" ref="kdIpInput" @blur="handleBlur"></kd-ip-input></div>',
+    template: '<div><kd-ip-input v-model="ip" :show-prefix="showPrefix" :show-port="showPort" :prefix="prefix" clearable ref="kdIpInput" @blur="handleBlur"></kd-ip-input></div>',
     components: {
       KdIpInput
     },
@@ -210,21 +210,7 @@ const vmFactory = props => {
   return vm;
 };
 
-const setValue = (target, value) => {
-  const e = document.createEvent('HTMLEvents');
-  e.initEvent('input', true, true);
-  target.value = value;
-  target.dispatchEvent(e);
-  return e;
-};
 
-const triggerKey = (target, keycode) => {
-  var e = document.createEvent('HTMLEvents');
-  e.initEvent('keydown', true, true);
-  e.keycode = keycode;
-  target.dispatchEvent(e);
-  return e;
-};
 
 describe('input(v-model)', () => {
   it('only ip input', async () => {
@@ -411,3 +397,29 @@ describe('input(v-model)', () => {
     vm.$destroy();
   });
 });
+
+// describe('clear', () => {
+//   it('mount clear button', async () => {
+//     const wrapper = factory({
+//       value: '127.0.0.1',
+//       clearable: true
+//     });
+//     await flushPromise();
+//     const input = wrapper.find('input');
+//     await input.trigger('focus');
+//     expect(wrapper.find('div .clear-btn').isVisible()).toBe(true);
+//     wrapper.destroy();
+//   });
+
+//   it('not mount clear button when empty', () => {
+//     const wrapper = factory({
+//       value: '',
+//       clearable: true
+//     });
+//     const input = wrapper.find('input');
+//     input.trigger('click');
+//     // expect(wrapper.find('div .clear-btn').exists()).toBe(false);
+//     console.log(wrapper.find('div .clear-btn').attributes('style'));
+//     wrapper.destroy();
+//   });
+// });

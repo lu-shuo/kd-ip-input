@@ -3,11 +3,13 @@
     <div class="box">
       <div class="title">
         <h1>only ip</h1>
-        <button @click="ip = ''">reset</button>
+        <button @click="ip = '';$refs.ip0.resetField()">reset</button>
       </div>
       <div class="wrapper">
         <kd-ip-input
+          ref="ip0"
           v-model="ip"
+          clearable
           check-empty-on-blur
           @blur="handleBlur"
         />

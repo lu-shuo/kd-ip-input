@@ -156,6 +156,8 @@ module.exports = g;
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: 'app',
@@ -12682,7 +12684,7 @@ process.umask = function() { return 0; };
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(1);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_24f333fa_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1dc02ef3_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(14);
 function injectStyle (ssrContext) {
   __webpack_require__(8)
 }
@@ -12702,7 +12704,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_24f333fa_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1dc02ef3_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -12723,7 +12725,7 @@ var content = __webpack_require__(9);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(11)("2142a39b", content, true, {});
+var update = __webpack_require__(11)("a121d376", content, true, {});
 
 /***/ }),
 /* 9 */
@@ -13196,7 +13198,7 @@ module.exports = function normalizeComponent (
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("only ip")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ip = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"check-empty-on-blur":""},on:{"blur":_vm.handleBlur},model:{value:(_vm.ip),callback:function ($$v) {_vm.ip=$$v},expression:"ip"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ip ? _vm.ip : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show prefix")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPrefix = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"prefix":_vm.prefix,"show-prefix":""},model:{value:(_vm.ipWithPrefix),callback:function ($$v) {_vm.ipWithPrefix=$$v},expression:"ipWithPrefix"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPrefix ? _vm.ipWithPrefix : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show port")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPort = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"show-port":""},model:{value:(_vm.ipWithPort),callback:function ($$v) {_vm.ipWithPort=$$v},expression:"ipWithPort"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPort ? _vm.ipWithPort : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show prefix and port")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPrefixAndPort = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"prefix":_vm.prefix,"show-prefix":"","show-port":""},model:{value:(_vm.ipWithPrefixAndPort),callback:function ($$v) {_vm.ipWithPrefixAndPort=$$v},expression:"ipWithPrefixAndPort"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPrefixAndPort ? _vm.ipWithPrefixAndPort : 'void string'))])])])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("only ip")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ip = '';_vm.$refs.ip0.resetField()}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{ref:"ip0",attrs:{"clearable":"","check-empty-on-blur":""},on:{"blur":_vm.handleBlur},model:{value:(_vm.ip),callback:function ($$v) {_vm.ip=$$v},expression:"ip"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ip ? _vm.ip : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show prefix")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPrefix = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"prefix":_vm.prefix,"show-prefix":""},model:{value:(_vm.ipWithPrefix),callback:function ($$v) {_vm.ipWithPrefix=$$v},expression:"ipWithPrefix"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPrefix ? _vm.ipWithPrefix : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show port")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPort = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"show-port":""},model:{value:(_vm.ipWithPort),callback:function ($$v) {_vm.ipWithPort=$$v},expression:"ipWithPort"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPort ? _vm.ipWithPort : 'void string'))])]),_vm._v(" "),_c('div',{staticClass:"box"},[_c('div',{staticClass:"title"},[_c('h1',[_vm._v("show prefix and port")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.ipWithPrefixAndPort = ''}}},[_vm._v("reset")])]),_vm._v(" "),_c('div',{staticClass:"wrapper"},[_c('kd-ip-input',{attrs:{"prefix":_vm.prefix,"show-prefix":"","show-port":""},model:{value:(_vm.ipWithPrefixAndPort),callback:function ($$v) {_vm.ipWithPrefixAndPort=$$v},expression:"ipWithPrefixAndPort"}})],1),_vm._v(" "),_c('p',{staticClass:"ip"},[_vm._v("输出："+_vm._s(_vm.ipWithPrefixAndPort ? _vm.ipWithPrefixAndPort : 'void string'))])])])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -13206,52 +13208,52 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/*!
- * kd-ip-input v1.0.5
+ * kd-ip-input v1.0.6
  * (c) 2022 Darren Lu
  * @license ISC
  */
-!function (t, n) {
-   true ? module.exports = n() : "function" == typeof define && define.amd ? define(n) : (t = "undefined" != typeof globalThis ? globalThis : t || self).kdIpInput = n();
+!function (t, e) {
+   true ? module.exports = e() : "function" == typeof define && define.amd ? define(e) : (t = "undefined" != typeof globalThis ? globalThis : t || self).kdIpInput = e();
 }(this, function () {
   "use strict";
   var t = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {},
-      n = Function.prototype,
-      e = n.bind,
-      i = n.call,
-      r = e && e.bind(i, i),
-      o = e ? function (t) {
+      e = Function.prototype,
+      n = e.bind,
+      i = e.call,
+      r = n && n.bind(i, i),
+      o = n ? function (t) {
     return t && r(t);
   } : function (t) {
     return t && function () {
       return i.apply(t, arguments);
     };
   },
-      u = o({}.isPrototypeOf),
-      s = function (t) {
+      s = o({}.isPrototypeOf),
+      u = function (t) {
     return t && t.Math == Math && t;
   },
-      p = s("object" == typeof globalThis && globalThis) || s("object" == typeof window && window) || s("object" == typeof self && self) || s("object" == typeof t && t) || function () {
+      a = u("object" == typeof globalThis && globalThis) || u("object" == typeof window && window) || u("object" == typeof self && self) || u("object" == typeof t && t) || function () {
     return this;
   }() || Function("return this")(),
-      a = Function.prototype,
-      l = a.apply,
-      c = a.bind,
-      d = a.call,
-      f = "object" == typeof Reflect && Reflect.apply || (c ? d.bind(l) : function () {
-    return d.apply(l, arguments);
+      p = Function.prototype,
+      l = p.apply,
+      d = p.bind,
+      c = p.call,
+      f = "object" == typeof Reflect && Reflect.apply || (d ? c.bind(l) : function () {
+    return c.apply(l, arguments);
   }),
       h = function (t) {
     return "function" == typeof t;
   },
-      b = {},
-      g = function (t) {
+      g = {},
+      b = function (t) {
     try {
       return !!t();
     } catch (t) {
       return !0;
     }
   },
-      y = !g(function () {
+      y = !b(function () {
     return 7 != Object.defineProperty({}, 1, { get: function () {
         return 7;
       } })[1];
@@ -13264,396 +13266,406 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
       _ = {}.propertyIsEnumerable,
       x = Object.getOwnPropertyDescriptor,
       k = x && !_.call({ 1: 2 }, 1);w.f = k ? function (t) {
-    var n = x(this, t);return !!n && n.enumerable;
-  } : _;var P,
-      O,
-      E = function (t, n) {
-    return { enumerable: !(1 & t), configurable: !(2 & t), writable: !(4 & t), value: n };
+    var e = x(this, t);return !!e && e.enumerable;
+  } : _;var C,
+      E,
+      O = function (t, e) {
+    return { enumerable: !(1 & t), configurable: !(2 & t), writable: !(4 & t), value: e };
   },
-      j = o,
-      S = j({}.toString),
-      C = j("".slice),
+      P = o,
+      j = P({}.toString),
+      S = P("".slice),
       T = function (t) {
-    return C(S(t), 8, -1);
+    return S(j(t), 8, -1);
   },
-      L = o,
-      I = g,
-      $ = T,
-      B = p.Object,
-      R = L("".split),
-      F = I(function () {
-    return !B("z").propertyIsEnumerable(0);
+      F = o,
+      L = b,
+      B = T,
+      I = a.Object,
+      $ = F("".split),
+      N = L(function () {
+    return !I("z").propertyIsEnumerable(0);
   }) ? function (t) {
-    return "String" == $(t) ? R(t, "") : B(t);
-  } : B,
-      N = p.TypeError,
-      D = function (t) {
-    if (null == t) throw N("Can't call method on " + t);return t;
+    return "String" == B(t) ? $(t, "") : I(t);
+  } : I,
+      R = a.TypeError,
+      z = function (t) {
+    if (null == t) throw R("Can't call method on " + t);return t;
   },
-      z = F,
-      A = D,
-      M = h,
-      V = function (t) {
-    return "object" == typeof t ? null !== t : M(t);
+      D = N,
+      U = z,
+      A = h,
+      M = function (t) {
+    return "object" == typeof t ? null !== t : A(t);
   },
-      U = {},
-      Y = U,
-      K = p,
-      W = h,
-      X = function (t) {
-    return W(t) ? t : void 0;
+      V = {},
+      Y = V,
+      H = a,
+      K = h,
+      W = function (t) {
+    return K(t) ? t : void 0;
   },
-      q = function (t, n) {
-    return arguments.length < 2 ? X(Y[t]) || X(K[t]) : Y[t] && Y[t][n] || K[t] && K[t][n];
+      X = function (t, e) {
+    return arguments.length < 2 ? W(Y[t]) || W(H[t]) : Y[t] && Y[t][e] || H[t] && H[t][e];
   },
-      G = p,
-      H = q("navigator", "userAgent") || "",
-      J = G.process,
-      Q = G.Deno,
+      q = a,
+      G = X("navigator", "userAgent") || "",
+      J = q.process,
+      Q = q.Deno,
       Z = J && J.versions || Q && Q.version,
-      tt = Z && Z.v8;tt && (O = (P = tt.split("."))[0] > 0 && P[0] < 4 ? 1 : +(P[0] + P[1])), !O && H && (!(P = H.match(/Edge\/(\d+)/)) || P[1] >= 74) && (P = H.match(/Chrome\/(\d+)/)) && (O = +P[1]);var nt = O,
-      et = nt,
-      it = g,
+      tt = Z && Z.v8;tt && (E = (C = tt.split("."))[0] > 0 && C[0] < 4 ? 1 : +(C[0] + C[1])), !E && G && (!(C = G.match(/Edge\/(\d+)/)) || C[1] >= 74) && (C = G.match(/Chrome\/(\d+)/)) && (E = +C[1]);var et = E,
+      nt = et,
+      it = b,
       rt = !!Object.getOwnPropertySymbols && !it(function () {
-    var t = Symbol();return !String(t) || !(Object(t) instanceof Symbol) || !Symbol.sham && et && et < 41;
+    var t = Symbol();return !String(t) || !(Object(t) instanceof Symbol) || !Symbol.sham && nt && nt < 41;
   }),
       ot = rt && !Symbol.sham && "symbol" == typeof Symbol.iterator,
-      ut = q,
-      st = h,
-      pt = u,
-      at = ot,
-      lt = p.Object,
-      ct = at ? function (t) {
+      st = X,
+      ut = h,
+      at = s,
+      pt = ot,
+      lt = a.Object,
+      dt = pt ? function (t) {
     return "symbol" == typeof t;
   } : function (t) {
-    var n = ut("Symbol");return st(n) && pt(n.prototype, lt(t));
+    var e = st("Symbol");return ut(e) && at(e.prototype, lt(t));
   },
-      dt = p.String,
+      ct = a.String,
       ft = h,
       ht = function (t) {
     try {
-      return dt(t);
+      return ct(t);
     } catch (t) {
       return "Object";
     }
   },
-      bt = p.TypeError,
-      gt = function (t) {
-    if (ft(t)) return t;throw bt(ht(t) + " is not a function");
+      gt = a.TypeError,
+      bt = function (t) {
+    if (ft(t)) return t;throw gt(ht(t) + " is not a function");
   },
-      yt = gt,
+      yt = bt,
       vt = m,
       mt = h,
-      wt = V,
-      _t = p.TypeError,
+      wt = M,
+      _t = a.TypeError,
       xt = { exports: {} },
-      kt = p,
-      Pt = Object.defineProperty,
-      Ot = function (t, n) {
+      kt = a,
+      Ct = Object.defineProperty,
+      Et = function (t, e) {
     try {
-      Pt(kt, t, { value: n, configurable: !0, writable: !0 });
-    } catch (e) {
-      kt[t] = n;
-    }return n;
+      Ct(kt, t, { value: e, configurable: !0, writable: !0 });
+    } catch (n) {
+      kt[t] = e;
+    }return e;
   },
-      Et = "__core-js_shared__",
-      jt = p[Et] || Ot(Et, {});(xt.exports = function (t, n) {
-    return jt[t] || (jt[t] = void 0 !== n ? n : {});
-  })("versions", []).push({ version: "3.20.2", mode: "pure", copyright: "© 2022 Denis Pushkarev (zloirock.ru)" });var St = D,
-      Ct = p.Object,
+      Ot = "__core-js_shared__",
+      Pt = a[Ot] || Et(Ot, {});(xt.exports = function (t, e) {
+    return Pt[t] || (Pt[t] = void 0 !== e ? e : {});
+  })("versions", []).push({ version: "3.20.2", mode: "pure", copyright: "© 2022 Denis Pushkarev (zloirock.ru)" });var jt = z,
+      St = a.Object,
       Tt = function (t) {
-    return Ct(St(t));
+    return St(jt(t));
   },
-      Lt = Tt,
-      It = o({}.hasOwnProperty),
-      $t = Object.hasOwn || function (t, n) {
-    return It(Lt(t), n);
+      Ft = Tt,
+      Lt = o({}.hasOwnProperty),
+      Bt = Object.hasOwn || function (t, e) {
+    return Lt(Ft(t), e);
   },
-      Bt = o,
-      Rt = 0,
-      Ft = Math.random(),
-      Nt = Bt(1..toString),
-      Dt = p,
-      zt = xt.exports,
-      At = $t,
-      Mt = function (t) {
-    return "Symbol(" + (void 0 === t ? "" : t) + ")_" + Nt(++Rt + Ft, 36);
+      It = o,
+      $t = 0,
+      Nt = Math.random(),
+      Rt = It(1..toString),
+      zt = a,
+      Dt = xt.exports,
+      Ut = Bt,
+      At = function (t) {
+    return "Symbol(" + (void 0 === t ? "" : t) + ")_" + Rt(++$t + Nt, 36);
   },
-      Vt = rt,
-      Ut = ot,
-      Yt = zt("wks"),
-      Kt = Dt.Symbol,
-      Wt = Kt && Kt.for,
-      Xt = Ut ? Kt : Kt && Kt.withoutSetter || Mt,
-      qt = m,
-      Gt = V,
-      Ht = ct,
-      Jt = function (t, n) {
-    var e = t[n];return null == e ? void 0 : yt(e);
+      Mt = rt,
+      Vt = ot,
+      Yt = Dt("wks"),
+      Ht = zt.Symbol,
+      Kt = Ht && Ht.for,
+      Wt = Vt ? Ht : Ht && Ht.withoutSetter || At,
+      Xt = m,
+      qt = M,
+      Gt = dt,
+      Jt = function (t, e) {
+    var n = t[e];return null == n ? void 0 : yt(n);
   },
-      Qt = function (t, n) {
-    var e, i;if ("string" === n && mt(e = t.toString) && !wt(i = vt(e, t))) return i;if (mt(e = t.valueOf) && !wt(i = vt(e, t))) return i;if ("string" !== n && mt(e = t.toString) && !wt(i = vt(e, t))) return i;throw _t("Can't convert object to primitive value");
+      Qt = function (t, e) {
+    var n, i;if ("string" === e && mt(n = t.toString) && !wt(i = vt(n, t))) return i;if (mt(n = t.valueOf) && !wt(i = vt(n, t))) return i;if ("string" !== e && mt(n = t.toString) && !wt(i = vt(n, t))) return i;throw _t("Can't convert object to primitive value");
   },
       Zt = function (t) {
-    if (!At(Yt, t) || !Vt && "string" != typeof Yt[t]) {
-      var n = "Symbol." + t;Vt && At(Kt, t) ? Yt[t] = Kt[t] : Yt[t] = Ut && Wt ? Wt(n) : Xt(n);
+    if (!Ut(Yt, t) || !Mt && "string" != typeof Yt[t]) {
+      var e = "Symbol." + t;Mt && Ut(Ht, t) ? Yt[t] = Ht[t] : Yt[t] = Vt && Kt ? Kt(e) : Wt(e);
     }return Yt[t];
   },
-      tn = p.TypeError,
-      nn = Zt("toPrimitive"),
-      en = function (t, n) {
-    if (!Gt(t) || Ht(t)) return t;var e,
-        i = Jt(t, nn);if (i) {
-      if (void 0 === n && (n = "default"), e = qt(i, t, n), !Gt(e) || Ht(e)) return e;throw tn("Can't convert object to primitive value");
-    }return void 0 === n && (n = "number"), Qt(t, n);
+      te = a.TypeError,
+      ee = Zt("toPrimitive"),
+      ne = function (t, e) {
+    if (!qt(t) || Gt(t)) return t;var n,
+        i = Jt(t, ee);if (i) {
+      if (void 0 === e && (e = "default"), n = Xt(i, t, e), !qt(n) || Gt(n)) return n;throw te("Can't convert object to primitive value");
+    }return void 0 === e && (e = "number"), Qt(t, e);
   },
-      rn = ct,
-      on = function (t) {
-    var n = en(t, "string");return rn(n) ? n : n + "";
+      ie = dt,
+      re = function (t) {
+    var e = ne(t, "string");return ie(e) ? e : e + "";
   },
-      un = V,
-      sn = p.document,
-      pn = un(sn) && un(sn.createElement),
-      an = function (t) {
-    return pn ? sn.createElement(t) : {};
+      oe = M,
+      se = a.document,
+      ue = oe(se) && oe(se.createElement),
+      ae = function (t) {
+    return ue ? se.createElement(t) : {};
   },
-      ln = !y && !g(function () {
-    return 7 != Object.defineProperty(an("div"), "a", { get: function () {
+      pe = !y && !b(function () {
+    return 7 != Object.defineProperty(ae("div"), "a", { get: function () {
         return 7;
       } }).a;
   }),
-      cn = y,
-      dn = m,
-      fn = w,
-      hn = E,
-      bn = function (t) {
-    return z(A(t));
+      le = y,
+      de = m,
+      ce = w,
+      fe = O,
+      he = function (t) {
+    return D(U(t));
   },
-      gn = on,
-      yn = $t,
-      vn = ln,
-      mn = Object.getOwnPropertyDescriptor;b.f = cn ? mn : function (t, n) {
-    if (t = bn(t), n = gn(n), vn) try {
-      return mn(t, n);
-    } catch (t) {}if (yn(t, n)) return hn(!dn(fn.f, t, n), t[n]);
-  };var wn = g,
-      _n = h,
-      xn = /#|\.prototype\./,
-      kn = function (t, n) {
-    var e = On[Pn(t)];return e == jn || e != En && (_n(n) ? wn(n) : !!n);
+      ge = re,
+      be = Bt,
+      ye = pe,
+      ve = Object.getOwnPropertyDescriptor;g.f = le ? ve : function (t, e) {
+    if (t = he(t), e = ge(e), ye) try {
+      return ve(t, e);
+    } catch (t) {}if (be(t, e)) return fe(!de(ce.f, t, e), t[e]);
+  };var me = b,
+      we = h,
+      _e = /#|\.prototype\./,
+      xe = function (t, e) {
+    var n = Ce[ke(t)];return n == Oe || n != Ee && (we(e) ? me(e) : !!e);
   },
-      Pn = kn.normalize = function (t) {
-    return String(t).replace(xn, ".").toLowerCase();
+      ke = xe.normalize = function (t) {
+    return String(t).replace(_e, ".").toLowerCase();
   },
-      On = kn.data = {},
-      En = kn.NATIVE = "N",
-      jn = kn.POLYFILL = "P",
-      Sn = kn,
-      Cn = gt,
-      Tn = o(o.bind),
-      Ln = {},
-      In = y && g(function () {
+      Ce = xe.data = {},
+      Ee = xe.NATIVE = "N",
+      Oe = xe.POLYFILL = "P",
+      Pe = xe,
+      je = bt,
+      Se = o(o.bind),
+      Te = {},
+      Fe = y && b(function () {
     return 42 != Object.defineProperty(function () {}, "prototype", { value: 42, writable: !1 }).prototype;
   }),
-      $n = p,
-      Bn = V,
-      Rn = $n.String,
-      Fn = $n.TypeError,
-      Nn = y,
-      Dn = ln,
-      zn = In,
-      An = function (t) {
-    if (Bn(t)) return t;throw Fn(Rn(t) + " is not an object");
+      Le = a,
+      Be = M,
+      Ie = Le.String,
+      $e = Le.TypeError,
+      Ne = y,
+      Re = pe,
+      ze = Fe,
+      De = function (t) {
+    if (Be(t)) return t;throw $e(Ie(t) + " is not an object");
   },
-      Mn = on,
-      Vn = p.TypeError,
-      Un = Object.defineProperty,
-      Yn = Object.getOwnPropertyDescriptor,
-      Kn = "enumerable",
-      Wn = "configurable",
-      Xn = "writable";Ln.f = Nn ? zn ? function (t, n, e) {
-    if (An(t), n = Mn(n), An(e), "function" == typeof t && "prototype" === n && "value" in e && Xn in e && !e.writable) {
-      var i = Yn(t, n);i && i.writable && (t[n] = e.value, e = { configurable: Wn in e ? e.configurable : i.configurable, enumerable: Kn in e ? e.enumerable : i.enumerable, writable: !1 });
-    }return Un(t, n, e);
-  } : Un : function (t, n, e) {
-    if (An(t), n = Mn(n), An(e), Dn) try {
-      return Un(t, n, e);
-    } catch (t) {}if ("get" in e || "set" in e) throw Vn("Accessors not supported");return "value" in e && (t[n] = e.value), t;
-  };var qn = Ln,
-      Gn = E,
-      Hn = y ? function (t, n, e) {
-    return qn.f(t, n, Gn(1, e));
-  } : function (t, n, e) {
-    return t[n] = e, t;
+      Ue = re,
+      Ae = a.TypeError,
+      Me = Object.defineProperty,
+      Ve = Object.getOwnPropertyDescriptor,
+      Ye = "enumerable",
+      He = "configurable",
+      Ke = "writable";Te.f = Ne ? ze ? function (t, e, n) {
+    if (De(t), e = Ue(e), De(n), "function" == typeof t && "prototype" === e && "value" in n && Ke in n && !n.writable) {
+      var i = Ve(t, e);i && i.writable && (t[e] = n.value, n = { configurable: He in n ? n.configurable : i.configurable, enumerable: Ye in n ? n.enumerable : i.enumerable, writable: !1 });
+    }return Me(t, e, n);
+  } : Me : function (t, e, n) {
+    if (De(t), e = Ue(e), De(n), Re) try {
+      return Me(t, e, n);
+    } catch (t) {}if ("get" in n || "set" in n) throw Ae("Accessors not supported");return "value" in n && (t[e] = n.value), t;
+  };var We = Te,
+      Xe = O,
+      qe = y ? function (t, e, n) {
+    return We.f(t, e, Xe(1, n));
+  } : function (t, e, n) {
+    return t[e] = n, t;
   },
-      Jn = p,
-      Qn = f,
-      Zn = o,
-      te = h,
-      ne = b.f,
-      ee = Sn,
-      ie = U,
-      re = function (t, n) {
-    return Cn(t), void 0 === n ? t : Tn ? Tn(t, n) : function () {
-      return t.apply(n, arguments);
+      Ge = a,
+      Je = f,
+      Qe = o,
+      Ze = h,
+      tn = g.f,
+      en = Pe,
+      nn = V,
+      rn = function (t, e) {
+    return je(t), void 0 === e ? t : Se ? Se(t, e) : function () {
+      return t.apply(e, arguments);
     };
   },
-      oe = Hn,
-      ue = $t,
-      se = function (t) {
-    var n = function (e, i, r) {
-      if (this instanceof n) {
+      on = qe,
+      sn = Bt,
+      un = function (t) {
+    var e = function (n, i, r) {
+      if (this instanceof e) {
         switch (arguments.length) {case 0:
             return new t();case 1:
-            return new t(e);case 2:
-            return new t(e, i);}return new t(e, i, r);
-      }return Qn(t, this, arguments);
-    };return n.prototype = t.prototype, n;
+            return new t(n);case 2:
+            return new t(n, i);}return new t(n, i, r);
+      }return Je(t, this, arguments);
+    };return e.prototype = t.prototype, e;
   },
-      pe = Math.ceil,
-      ae = Math.floor,
-      le = function (t) {
-    var n = +t;return n != n || 0 === n ? 0 : (n > 0 ? ae : pe)(n);
+      an = Math.ceil,
+      pn = Math.floor,
+      ln = function (t) {
+    var e = +t;return e != e || 0 === e ? 0 : (e > 0 ? pn : an)(e);
   },
-      ce = Math.min,
-      de = function (t) {
-    return t > 0 ? ce(le(t), 9007199254740991) : 0;
+      dn = Math.min,
+      cn = function (t) {
+    return t > 0 ? dn(ln(t), 9007199254740991) : 0;
   },
-      fe = gt,
-      he = Tt,
-      be = F,
-      ge = function (t) {
-    return de(t.length);
+      fn = bt,
+      hn = Tt,
+      gn = N,
+      bn = function (t) {
+    return cn(t.length);
   },
-      ye = p.TypeError,
-      ve = function (t) {
-    return function (n, e, i, r) {
-      fe(e);var o = he(n),
-          u = be(o),
-          s = ge(o),
-          p = t ? s - 1 : 0,
-          a = t ? -1 : 1;if (i < 2) for (;;) {
-        if (p in u) {
-          r = u[p], p += a;break;
-        }if (p += a, t ? p < 0 : s <= p) throw ye("Reduce of empty array with no initial value");
-      }for (; t ? p >= 0 : s > p; p += a) p in u && (r = e(r, u[p], p, o));return r;
+      yn = a.TypeError,
+      vn = function (t) {
+    return function (e, n, i, r) {
+      fn(n);var o = hn(e),
+          s = gn(o),
+          u = bn(o),
+          a = t ? u - 1 : 0,
+          p = t ? -1 : 1;if (i < 2) for (;;) {
+        if (a in s) {
+          r = s[a], a += p;break;
+        }if (a += p, t ? a < 0 : u <= a) throw yn("Reduce of empty array with no initial value");
+      }for (; t ? a >= 0 : u > a; a += p) a in s && (r = n(r, s[a], a, o));return r;
     };
   },
-      me = { left: ve(!1), right: ve(!0) },
-      we = g,
-      _e = "process" == T(p.process),
-      xe = me.left,
-      ke = nt,
-      Pe = _e;(function (t, n) {
-    var e,
+      mn = { left: vn(!1), right: vn(!0) },
+      wn = b,
+      _n = "process" == T(a.process),
+      xn = mn.left,
+      kn = et,
+      Cn = _n;(function (t, e) {
+    var n,
         i,
         r,
         o,
-        u,
         s,
-        p,
+        u,
         a,
+        p,
         l = t.target,
-        c = t.global,
-        d = t.stat,
+        d = t.global,
+        c = t.stat,
         f = t.proto,
-        h = c ? Jn : d ? Jn[l] : (Jn[l] || {}).prototype,
-        b = c ? ie : ie[l] || oe(ie, l, {})[l],
-        g = b.prototype;for (r in n) e = !ee(c ? r : l + (d ? "." : "#") + r, t.forced) && h && ue(h, r), u = b[r], e && (s = t.noTargetGet ? (a = ne(h, r)) && a.value : h[r]), o = e && s ? s : n[r], e && typeof u == typeof o || (p = t.bind && e ? re(o, Jn) : t.wrap && e ? se(o) : f && te(o) ? Zn(o) : o, (t.sham || o && o.sham || u && u.sham) && oe(p, "sham", !0), oe(b, r, p), f && (ue(ie, i = l + "Prototype") || oe(ie, i, {}), oe(ie[i], r, o), t.real && g && !g[r] && oe(g, r, o)));
-  })({ target: "Array", proto: !0, forced: !function (t, n) {
-      var e = [][t];return !!e && we(function () {
-        e.call(null, n || function () {
+        h = d ? Ge : c ? Ge[l] : (Ge[l] || {}).prototype,
+        g = d ? nn : nn[l] || on(nn, l, {})[l],
+        b = g.prototype;for (r in e) n = !en(d ? r : l + (c ? "." : "#") + r, t.forced) && h && sn(h, r), s = g[r], n && (u = t.noTargetGet ? (p = tn(h, r)) && p.value : h[r]), o = n && u ? u : e[r], n && typeof s == typeof o || (a = t.bind && n ? rn(o, Ge) : t.wrap && n ? un(o) : f && Ze(o) ? Qe(o) : o, (t.sham || o && o.sham || s && s.sham) && on(a, "sham", !0), on(g, r, a), f && (sn(nn, i = l + "Prototype") || on(nn, i, {}), on(nn[i], r, o), t.real && b && !b[r] && on(b, r, o)));
+  })({ target: "Array", proto: !0, forced: !function (t, e) {
+      var n = [][t];return !!n && wn(function () {
+        n.call(null, e || function () {
           throw 1;
         }, 1);
       });
-    }("reduce") || !Pe && ke > 79 && ke < 83 }, { reduce: function (t) {
-      var n = arguments.length;return xe(this, t, n, n > 1 ? arguments[1] : void 0);
-    } });var Oe = U;function Ee(t) {
-    var n,
-        e,
+    }("reduce") || !Cn && kn > 79 && kn < 83 }, { reduce: function (t) {
+      var e = arguments.length;return xn(this, t, e, e > 1 ? arguments[1] : void 0);
+    } });var En = V;function On(t) {
+    var e,
+        n,
         i,
         r,
         o,
-        u = {};return t.setSelectionRange ? (u.begin = t.selectionStart, u.end = t.selectionEnd, u.result = t.value.substring(u.begin, u.end)) : document.selection && ("input" === t.tagName.toLowerCase() ? (n = document.selection.createRange(), (e = t.createTextRange()).collapse(!0), e.select(), (i = document.selection.createRange()).setEndPoint("EndToEnd", n), u.begin = i.text.length - n.text.length, u.end = i.text.length, u.result = n.text, n.select()) : "textarea" === t.tagName.toLowerCase() && ((o = (r = document.selection.createRange()).duplicate()).moveToElementText(t), o.setEndPoint("EndToEnd", r), u.begin = o.text.length - r.text.length, u.end = o.text.length, u.result = r.text)), t.focus(), u;
+        s = {};return t.setSelectionRange ? (s.begin = t.selectionStart, s.end = t.selectionEnd, s.result = t.value.substring(s.begin, s.end)) : document.selection && ("input" === t.tagName.toLowerCase() ? (e = document.selection.createRange(), (n = t.createTextRange()).collapse(!0), n.select(), (i = document.selection.createRange()).setEndPoint("EndToEnd", e), s.begin = i.text.length - e.text.length, s.end = i.text.length, s.result = e.text, e.select()) : "textarea" === t.tagName.toLowerCase() && ((o = (r = document.selection.createRange()).duplicate()).moveToElementText(t), o.setEndPoint("EndToEnd", r), s.begin = o.text.length - r.text.length, s.end = o.text.length, s.result = r.text)), t.focus(), s;
   }(function (t) {
-    return Oe[t + "Prototype"];
-  })("Array").reduce;var je = { name: "kd-ip-input", props: { value: { type: String, required: !0, default: "" }, prefix: { type: String, validator: function (t) {
+    return En[t + "Prototype"];
+  })("Array").reduce;var Pn = { name: "kd-ip-input", props: { value: { type: String, required: !0, default: "" }, prefix: { type: String, validator: function (t) {
           return -1 !== ["http", "https", "wss", "ws"].indexOf(t);
-        } }, showPrefix: { type: Boolean, default: !1 }, showPort: { type: Boolean, default: !1 }, disabled: { type: Boolean, default: !1 }, checkEmptyOnBlur: { type: Boolean, default: !1 } }, data() {
-      return { ipList: this.showPort ? ["", "", "", "", ""] : ["", "", "", ""], isEmptyOnBlur: !1 };
+        } }, showPrefix: { type: Boolean, default: !1 }, showPort: { type: Boolean, default: !1 }, disabled: { type: Boolean, default: !1 }, clearable: { type: Boolean, default: !1 }, checkEmptyOnBlur: { type: Boolean, default: !1 }, themeColor: { type: String, default: "#427bf1" } }, data() {
+      return { ipList: this.showPort ? ["", "", "", "", ""] : ["", "", "", ""], isEmptyOnBlur: !1, isFocus: !1, showClear: !1 };
     }, computed: { liWidth() {
         return this.showPort ? "20%" : "25%";
+      }, isEmpty() {
+        return this.ipList.every(t => "" === t);
       } }, watch: { value(t) {
         this.init(t);
       }, ipList(t) {
-        if (t.every(t => "" === t)) return void this.$emit("input", "");let n;const e = t.slice(0, 4);n = this.showPrefix && this.prefix ? this.prefix + "://" + e.join(".") : e.join("."), n = this.showPort ? n + ":" + t[4] : n, this.$emit("input", n);
+        if (t.every(t => "" === t)) return void this.$emit("input", "");let e;const n = t.slice(0, 4);e = this.showPrefix && this.prefix ? this.prefix + "://" + n.join(".") : n.join("."), e = this.showPort ? e + ":" + t[4] : e, this.$emit("input", e);
       } }, filters: { prefixFormat: t => -1 === t.indexOf("://") ? t + "://" : t }, mounted() {
       this.init(this.value);
     }, beforeDestroy() {
       this.resetField();
-    }, methods: { resetField() {
+    }, methods: { handleUlHover() {
+        this.isFocus || (document.getElementsByClassName("kd-ip-input-group__input-ul")[0].style.borderColor = "#c0c4cc", this.clearable && !this.isEmpty && (this.showClear = !0));
+      }, handleUlOut() {
+        this.isFocus || (document.getElementsByClassName("kd-ip-input-group__input-ul")[0].style.borderColor = "#dcdfe6", this.clearable && this.showClear && (this.showClear = !1));
+      }, handleClear() {
+        this.ipList = this.showPort ? ["", "", "", "", ""] : ["", "", "", ""], this.showClear = !1;
+      }, resetField() {
         this.isEmptyOnBlur = !1;
       }, init(t) {
         if (!t) return void (this.ipList = this.showPort ? ["", "", "", "", ""] : ["", "", "", ""]);if (4 !== t.split(".").length) return void console.error("[kd-ip-input]：ip格式不合法");if (this.showPrefix) {
           if (!this.prefix) return void console.error("[kd-ip-input]：showPrefix模式需指定prefix");-1 !== t.indexOf(this.prefix) && (t = t.split(/(http|https|wss|ws):\/\//).slice(-1)[0].trim());
         }if (this.showPort) {
           if (-1 === t.indexOf(":")) return void console.error("[kd-ip-input]：invalid ip with port(missing colon)");{
-            const n = t.split(":")[1].trim();this.ipList[4] = n, t = t.split(":")[0].trim();
+            const e = t.split(":")[1].trim();this.ipList[4] = e, t = t.split(":")[0].trim();
           }
-        }const n = t.split(".");for (let t = 0, e = n.length; t < e; t++) {
-          const e = n[t].trim();isNaN(e) || e < 0 || e > 255 ? (console.info("%c[kd-ip-input]：输入ip范围不合法，已默认恢复至0", "color: red"), this.ipList.splice(t, 1, "0")) : this.ipList.splice(t, 1, e);
+        }const e = t.split(".");for (let t = 0, n = e.length; t < n; t++) {
+          const n = e[t].trim();isNaN(n) || n < 0 || n > 255 ? (console.info("%c[kd-ip-input]：输入ip范围不合法，已默认恢复至0", "color: red"), this.ipList.splice(t, 1, "0")) : this.ipList.splice(t, 1, n);
         }
       }, genIp(t = !1) {
-        const n = this.ipList;let e;if (n.every(t => "" !== t)) {
-          t && (this.isEmptyOnBlur = !1);const i = n.slice(0, 4);e = this.showPrefix && this.prefix ? this.prefix + "://" + i.join(".") : i.join("."), e = this.showPort ? e + ":" + n[4] : e;
-        } else e = "", t && (this.isEmptyOnBlur = !0);return e;
-      }, handleInput(t, n) {
-        let e = t.target.value;e = e.trim();const i = parseInt(e, 10);e = isNaN(i) ? "" : n <= 3 ? i > 255 ? "255" : "" + i : i > 65535 ? "65535" : "" + i, this.$set(this.ipList, n, e), (!this.showPort && 3 === e.length && n < 3 || this.showPort && 3 === e.length && n < 4) && this.$refs.ipInput[n + 1].focus();
-      }, handleKeyDown(t, n) {
-        const e = t.keyCode,
-              i = t.target.value;8 !== e && 37 !== e || (0 === i.length || 0 === Ee(t.target).end) && n > 0 && this.$refs.ipInput[n - 1].focus(), 39 === e && Ee(t.target).end === i.length && (!this.showPort && n < 3 || this.showPort && n < 4) && this.$refs.ipInput[n + 1].focus(), 32 !== e && 13 !== e || !(!this.showPort && n < 3 || this.showPort && n < 4) || this.$refs.ipInput[n + 1].focus();
+        const e = this.ipList;let n;if (e.every(t => "" !== t)) {
+          t && (this.isEmptyOnBlur = !1);const i = e.slice(0, 4);n = this.showPrefix && this.prefix ? this.prefix + "://" + i.join(".") : i.join("."), n = this.showPort ? n + ":" + e[4] : n;
+        } else n = "", t && (this.isEmptyOnBlur = !0);return n;
+      }, handleFocus() {
+        this.isFocus = !0, this.clearable && !this.isEmpty && (this.showClear = !0);
+      }, handleInput(t, e) {
+        this.resetField();let n = t.target.value;n = n.trim();const i = parseInt(n, 10);n = isNaN(i) ? "" : e <= 3 ? i > 255 ? "255" : "" + i : i > 65535 ? "65535" : "" + i, this.$set(this.ipList, e, n), (!this.showPort && 3 === n.length && e < 3 || this.showPort && 3 === n.length && e < 4) && this.$refs.ipInput[e + 1].focus(), this.clearable && (this.showClear ? this.isEmpty && (this.showClear = !1) : this.isEmpty || (this.showClear = !0));
+      }, handleKeyDown(t, e) {
+        const n = t.keyCode,
+              i = t.target.value;8 !== n && 37 !== n || (0 === i.length || 0 === On(t.target).end) && e > 0 && this.$refs.ipInput[e - 1].focus(), 39 === n && On(t.target).end === i.length && (!this.showPort && e < 3 || this.showPort && e < 4) && this.$refs.ipInput[e + 1].focus(), 32 !== n && 13 !== n || !(!this.showPort && e < 3 || this.showPort && e < 4) || this.$refs.ipInput[e + 1].focus();
       }, handleBlur() {
         this.$nextTick(() => {
           if (-1 === document.activeElement.className.indexOf("kd-ip-input-group__input-inner")) {
-            this.ipList.some(t => t || "0" === t) && this.ipList.forEach((t, n) => {
-              "" === t && this.$set(this.ipList, n, "0");
+            this.isFocus = !1, this.clearable && this.showClear && (this.showClear = !1), this.ipList.some(t => t || "0" === t) && this.ipList.forEach((t, e) => {
+              "" === t && this.$set(this.ipList, e, "0");
             });const t = this.genIp(!0);this.$emit("blur", t);
           }
         });
-      } } };function Se(t, n, e, i, r, o, u, s, p, a) {
-    "boolean" != typeof u && (p = s, s = u, u = !1);const l = "function" == typeof e ? e.options : e;let c;if (t && t.render && (l.render = t.render, l.staticRenderFns = t.staticRenderFns, l._compiled = !0, r && (l.functional = !0)), i && (l._scopeId = i), o ? (c = function (t) {
-      (t = t || this.$vnode && this.$vnode.ssrContext || this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) || "undefined" == typeof __VUE_SSR_CONTEXT__ || (t = __VUE_SSR_CONTEXT__), n && n.call(this, p(t)), t && t._registeredComponents && t._registeredComponents.add(o);
-    }, l._ssrRegister = c) : n && (c = u ? function (t) {
-      n.call(this, a(t, this.$root.$options.shadowRoot));
+      } } };function jn(t, e, n, i, r, o, s, u, a, p) {
+    "boolean" != typeof s && (a = u, u = s, s = !1);const l = "function" == typeof n ? n.options : n;let d;if (t && t.render && (l.render = t.render, l.staticRenderFns = t.staticRenderFns, l._compiled = !0, r && (l.functional = !0)), i && (l._scopeId = i), o ? (d = function (t) {
+      (t = t || this.$vnode && this.$vnode.ssrContext || this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) || "undefined" == typeof __VUE_SSR_CONTEXT__ || (t = __VUE_SSR_CONTEXT__), e && e.call(this, a(t)), t && t._registeredComponents && t._registeredComponents.add(o);
+    }, l._ssrRegister = d) : e && (d = s ? function (t) {
+      e.call(this, p(t, this.$root.$options.shadowRoot));
     } : function (t) {
-      n.call(this, s(t));
-    }), c) if (l.functional) {
-      const t = l.render;l.render = function (n, e) {
-        return c.call(e), t(n, e);
+      e.call(this, u(t));
+    }), d) if (l.functional) {
+      const t = l.render;l.render = function (e, n) {
+        return d.call(n), t(e, n);
       };
     } else {
-      const t = l.beforeCreate;l.beforeCreate = t ? [].concat(t, c) : [c];
-    }return e;
-  }!function (t, n) {
-    void 0 === n && (n = {});var e = n.insertAt;if (t && "undefined" != typeof document) {
+      const t = l.beforeCreate;l.beforeCreate = t ? [].concat(t, d) : [d];
+    }return n;
+  }!function (t, e) {
+    void 0 === e && (e = {});var n = e.insertAt;if (t && "undefined" != typeof document) {
       var i = document.head || document.getElementsByTagName("head")[0],
-          r = document.createElement("style");r.type = "text/css", "top" === e && i.firstChild ? i.insertBefore(r, i.firstChild) : i.appendChild(r), r.styleSheet ? r.styleSheet.cssText = t : r.appendChild(document.createTextNode(t));
+          r = document.createElement("style");r.type = "text/css", "top" === n && i.firstChild ? i.insertBefore(r, i.firstChild) : i.appendChild(r), r.styleSheet ? r.styleSheet.cssText = t : r.appendChild(document.createTextNode(t));
     }
-  }('@charset "UTF-8";\n.is-disabled[data-v-bf4b97a0] {\n  background-color: #f5f7fa !important;\n  border-color: #e4e7ed !important;\n  cursor: not-allowed;\n}\n.is-disabled-input[data-v-bf4b97a0] {\n  cursor: not-allowed;\n  color: #c0c4cc !important;\n}\n.is-empty[data-v-bf4b97a0] {\n  border: 1px solid #f56c6c !important;\n}\n.kd-ip-input-group[data-v-bf4b97a0] {\n  line-height: normal;\n  display: inline-table;\n  width: 100%;\n  border-collapse: separate;\n  border-spacing: 0;\n  position: relative;\n  font-size: 14px;\n}\n.kd-ip-input-group .kd-ip-input-group__prepend[data-v-bf4b97a0] {\n  background-color: #f5f7fa;\n  color: #909399;\n  vertical-align: middle;\n  display: table-cell;\n  position: relative;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  border-right: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  padding: 0 20px;\n  width: 1px;\n  white-space: nowrap;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul[data-v-bf4b97a0] {\n  width: 100%;\n  height: 32px;\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  display: flex;\n  align-items: center;\n  font-size: inherit;\n  outline: none;\n  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li[data-v-bf4b97a0] {\n  height: 100%;\n  line-height: 100%;\n  list-style: none;\n  position: relative;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__dot[data-v-bf4b97a0] {\n  width: 5px;\n  height: 5px;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  right: 0;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon[data-v-bf4b97a0] {\n  width: 5px;\n  height: 15px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon .dot[data-v-bf4b97a0] {\n  width: 4px;\n  height: 4px;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-bf4b97a0] {\n  width: 100%;\n  height: 100%;\n  border: none;\n  color: #606266;\n  text-align: center;\n  background: transparent;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-bf4b97a0]:focus {\n  outline: none;\n  /*取消掉默认的input focus状态*/\n}');const Ce = je;var Te = function () {
+  }('@charset "UTF-8";\n.is-disabled[data-v-5847d9a0] {\n  background-color: #f5f7fa !important;\n  border-color: #e4e7ed !important;\n  cursor: not-allowed;\n}\n.is-disabled-input[data-v-5847d9a0] {\n  cursor: not-allowed;\n  color: #c0c4cc !important;\n}\n.is-empty[data-v-5847d9a0] {\n  border: 1px solid #f56c6c !important;\n}\n.kd-ip-input-group[data-v-5847d9a0] {\n  line-height: normal;\n  display: inline-table;\n  width: 100%;\n  border-collapse: separate;\n  border-spacing: 0;\n  position: relative;\n  font-size: 14px;\n}\n.kd-ip-input-group .kd-ip-input-group__prepend[data-v-5847d9a0] {\n  background-color: #f5f7fa;\n  color: #909399;\n  vertical-align: middle;\n  display: table-cell;\n  position: relative;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  border-right: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  padding: 0 20px;\n  width: 1px;\n  white-space: nowrap;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul[data-v-5847d9a0] {\n  width: 100%;\n  height: 32px;\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #dcdfe6;\n  border-radius: 4px;\n  display: flex;\n  align-items: center;\n  font-size: inherit;\n  outline: none;\n  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  position: relative;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li[data-v-5847d9a0] {\n  height: 100%;\n  line-height: 100%;\n  list-style: none;\n  position: relative;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__dot[data-v-5847d9a0] {\n  width: 5px;\n  height: 5px;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  right: 0;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon[data-v-5847d9a0] {\n  width: 5px;\n  height: 20px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-li .kd-ip-input-group__colon .dot[data-v-5847d9a0] {\n  width: 5px;\n  height: 5px;\n  border-radius: 50%;\n  background: #dcdfe6;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-5847d9a0] {\n  width: 100%;\n  height: 100%;\n  border: none;\n  color: #606266;\n  text-align: center;\n  background: transparent;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .kd-ip-input-group__input-inner[data-v-5847d9a0]:focus {\n  outline: none;\n  /*取消掉默认的input focus状态*/\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .clear-btn[data-v-5847d9a0] {\n  width: 14px;\n  height: 14px;\n  font-size: 14px;\n  line-height: 14px;\n  color: white;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  background: #c0c4cc;\n  border-radius: 50%;\n  position: absolute;\n  right: 5px;\n  cursor: pointer;\n  z-index: 10;\n}\n.kd-ip-input-group .kd-ip-input-group__input-ul .clear-btn[data-v-5847d9a0]:hover {\n  background: #909399;\n}');const Sn = Pn;var Tn = function () {
     var t = this,
-        n = t.$createElement,
-        e = t._self._c || n;return e("div", { staticClass: "kd-ip-input-group" }, [t.showPrefix ? e("div", { staticClass: "kd-ip-input-group__prepend" }, [t._v(t._s(t._f("prefixFormat")(t.prefix)))]) : t._e(), t._v(" "), e("ul", { staticClass: "kd-ip-input-group__input-ul", class: { "is-empty": t.checkEmptyOnBlur && t.isEmptyOnBlur } }, t._l(t.ipList, function (n, i) {
-      return e("li", { key: i, staticClass: "kd-ip-input-group__input-li", class: { "is-disabled": t.disabled }, style: { width: t.liWidth } }, [e("input", { ref: "ipInput", refInFor: !0, staticClass: "kd-ip-input-group__input-inner", class: { "is-disabled-input": t.disabled }, attrs: { placeholder: "", autocomplete: "off", disabled: t.disabled }, domProps: { value: n }, on: { input: function (n) {
-            return t.handleInput(n, i);
-          }, keydown: function (n) {
-            return t.handleKeyDown(n, i);
-          }, blur: function (n) {
-            return t.handleBlur(n, i);
-          } } }), t._v(" "), i < 3 ? e("div", { staticClass: "kd-ip-input-group__dot" }) : t._e(), t._v(" "), 5 === t.ipList.length && 4 === i ? e("div", { staticClass: "kd-ip-input-group__colon" }, [e("div", { staticClass: "dot" }), t._v(" "), e("div", { staticClass: "dot" })]) : t._e()]);
-    }), 0)]);
-  };Te._withStripped = !0;const Le = Se({ render: Te, staticRenderFns: [] }, undefined, Ce, "data-v-bf4b97a0", false, undefined, !1, void 0, void 0, void 0);var Ie = function (t) {
-    t.component(Le.name, Le);
-  };return "undefined" != typeof window && window.Vue && Ie(window.Vue), Ie;
+        e = t.$createElement,
+        n = t._self._c || e;return n("div", { staticClass: "kd-ip-input-group" }, [t.showPrefix ? n("div", { staticClass: "kd-ip-input-group__prepend" }, [t._v(t._s(t._f("prefixFormat")(t.prefix)))]) : t._e(), t._v(" "), n("ul", { staticClass: "kd-ip-input-group__input-ul", class: { "is-empty": t.checkEmptyOnBlur && t.isEmptyOnBlur }, style: { borderColor: t.isFocus ? t.themeColor : "#dcdfe6" }, on: { mouseover: t.handleUlHover, mouseout: t.handleUlOut } }, [t._l(t.ipList, function (e, i) {
+      return n("li", { key: i, staticClass: "kd-ip-input-group__input-li", class: { "is-disabled": t.disabled }, style: { width: t.liWidth } }, [n("input", { ref: "ipInput", refInFor: !0, staticClass: "kd-ip-input-group__input-inner", class: { "is-disabled-input": t.disabled }, attrs: { placeholder: "", autocomplete: "off", disabled: t.disabled }, domProps: { value: e }, on: { input: function (e) {
+            return t.handleInput(e, i);
+          }, keydown: function (e) {
+            return t.handleKeyDown(e, i);
+          }, blur: function (e) {
+            return t.handleBlur(e, i);
+          }, focus: t.handleFocus } }), t._v(" "), i < 3 ? n("div", { staticClass: "kd-ip-input-group__dot" }) : t._e(), t._v(" "), 5 === t.ipList.length && 4 === i ? n("div", { staticClass: "kd-ip-input-group__colon" }, [n("div", { staticClass: "dot" }), t._v(" "), n("div", { staticClass: "dot" })]) : t._e()]);
+    }), t._v(" "), n("div", { directives: [{ name: "show", rawName: "v-show", value: t.showClear, expression: "showClear" }], staticClass: "clear-btn", on: { click: t.handleClear } }, [t._v("x")])], 2)]);
+  };Tn._withStripped = !0;const Fn = jn({ render: Tn, staticRenderFns: [] }, undefined, Sn, "data-v-5847d9a0", false, undefined, !1, void 0, void 0, void 0);var Ln = function (t) {
+    t.component(Fn.name, Fn);
+  };return "undefined" != typeof window && window.Vue && Ln(window.Vue), Ln;
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 

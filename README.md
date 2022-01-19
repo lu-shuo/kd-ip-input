@@ -83,6 +83,9 @@ export default {
 | showPort | whether use port | Boolean | -- | false
 | disabled | whether input is disabled | Boolean | -- | false
 | checkEmptyOnBlur | whether check value is empty on blur(red border when empty) | Boolean | -- | false
+| clearable | whether to show clear button | Boolean | -- | false
+| themeColor | highlight color | String | -- | #427bf1
+
 
 ### Events
 | Event Name | Description | Parameters |

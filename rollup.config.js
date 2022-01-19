@@ -74,12 +74,12 @@ function genConfig(target) {
       resolve(),
       commonjs(), // 必须防止在babel之前
       vue({ css: false }), // css: false 将<style>块转换为导入语句
-      postcss({ extract: false, plugins: [autoprefixer] })
+      postcss({ extract: false, plugins: [autoprefixer] }),
     ]
   }
 
   if (['umd', 'iife'].includes(opts.format)) {
-    c.output.name = opts.name || '__self' // *代表你的 iife/umd 包，同一页上的其他脚本可以访问它
+    c.output.name = opts.name || '__kdIpInput' // *代表你的 iife/umd 包，同一页上的其他脚本可以访问它
   }
 
   // 默认babel转译，可选buble 

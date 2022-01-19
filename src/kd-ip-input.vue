@@ -4,7 +4,13 @@
       class="kd-ip-input-group__prepend"
       v-if="showPrefix"
     >{{prefix | prefixFormat}}</div>
-    <ul class="kd-ip-input-group__input-ul" :class="{'is-empty': checkEmptyOnBlur && isEmptyOnBlur}">
+    <ul
+      class="kd-ip-input-group__input-ul"
+      :class="{'is-empty': checkEmptyOnBlur && isEmptyOnBlur}"
+      :style="{borderColor: (isFocus ? themeColor : '#dcdfe6')}"
+      @mouseover="handleUlHover"
+      @mouseout="handleUlOut"
+    >
       <li
         v-for="(segment,index) in ipList"
         class="kd-ip-input-group__input-li"
@@ -23,6 +29,7 @@
           @input="handleInput($event, index)"
           @keydown="handleKeyDown($event, index)"
           @blur="handleBlur($event, index)"
+          @focus="handleFocus"
         >
         <div
           class="kd-ip-input-group__dot"
@@ -36,6 +43,11 @@
           <div class="dot"></div>
         </div>
       </li>
+      <div
+        class="clear-btn"
+        v-show="showClear"
+        @click="handleClear"
+      >x</div>
     </ul>
   </div>
 
@@ -74,20 +86,33 @@ export default {
       type: Boolean,
       default: false,
     },
+    clearable: {
+      type: Boolean,
+      default: false,
+    },
     checkEmptyOnBlur: {
       type: Boolean,
       default: false,
-    }
+    },
+    themeColor: {
+      type: String,
+      default: '#427bf1',
+    },
   },
   data() {
     return {
       ipList: this.showPort ? ['', '', '', '', ''] : ['', '', '', ''],
       isEmptyOnBlur: false,
+      isFocus: false,
+      showClear: false,
     };
   },
   computed: {
     liWidth() {
       return this.showPort ? '20%' : '25%';
+    },
+    isEmpty() {
+      return this.ipList.every((segment) => segment === '');
     },
   },
   watch: {
@@ -125,6 +150,33 @@ export default {
     this.resetField();
   },
   methods: {
+    // 处理容器hover
+    handleUlHover() {
+      if (!this.isFocus) {
+        document.getElementsByClassName(
+          'kd-ip-input-group__input-ul'
+        )[0].style.borderColor = '#c0c4cc';
+        if (this.clearable && !this.isEmpty) {
+          this.showClear = true;
+        }
+      }
+    },
+    // 处理容器hover结束
+    handleUlOut() {
+      if (!this.isFocus) {
+        document.getElementsByClassName(
+          'kd-ip-input-group__input-ul'
+        )[0].style.borderColor = '#dcdfe6';
+        if (this.clearable && this.showClear) {
+          this.showClear = false;
+        }
+      }
+    },
+    handleClear() {
+      this.ipList = this.showPort ? ['', '', '', '', ''] : ['', '', '', ''];
+      this.showClear = false;
+    },
+    // 重置非空校验
     resetField() {
       this.isEmptyOnBlur = false;
     },
@@ -199,7 +251,14 @@ export default {
       }
       return ip;
     },
+    handleFocus() {
+      this.isFocus = true;
+      if (this.clearable && !this.isEmpty) {
+        this.showClear = true;
+      }
+    },
     handleInput(e, index) {
+      this.resetField();
       let value = e.target.value;
       //当输入的是空格时，值赋为空
       value = value.trim();
@@ -222,6 +281,18 @@ export default {
         (this.showPort && value.length === 3 && index < 4)
       ) {
         this.$refs.ipInput[index + 1].focus();
+      }
+
+      if (this.clearable) {
+        if (this.showClear) {
+          if (this.isEmpty) {
+            this.showClear = false;
+          }
+        } else {
+          if (!this.isEmpty) {
+            this.showClear = true;
+          }
+        }
       }
     },
     handleKeyDown(e, index) {
@@ -261,6 +332,10 @@ export default {
         // 整体blur
         const activeClassName = document.activeElement.className;
         if (activeClassName.indexOf('kd-ip-input-group__input-inner') === -1) {
+          this.isFocus = false;
+          if (this.clearable && this.showClear) {
+            this.showClear = false;
+          }
           // 输入其中任意位，其他位补0
           if (this.ipList.some((segment) => segment || segment === '0')) {
             this.ipList.forEach((item, index) => {
@@ -291,7 +366,7 @@ $dotColor: #dcdfe6;
   color: #c0c4cc !important;
 }
 .is-empty {
-  border: 1px solid #f56c6c!important;
+  border: 1px solid #f56c6c !important;
 }
 .kd-ip-input-group {
   line-height: normal;
@@ -331,6 +406,7 @@ $dotColor: #dcdfe6;
     font-size: inherit;
     outline: none;
     transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
     .kd-ip-input-group__input-li {
       height: 100%;
       line-height: 100%;
@@ -348,7 +424,7 @@ $dotColor: #dcdfe6;
       }
       .kd-ip-input-group__colon {
         width: 5px;
-        height: 15px;
+        height: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -358,8 +434,8 @@ $dotColor: #dcdfe6;
         left: 0;
         transform: translateY(-50%);
         .dot {
-          width: 4px;
-          height: 4px;
+          width: 5px;
+          height: 5px;
           border-radius: 50%;
           background: $dotColor;
         }
@@ -375,6 +451,25 @@ $dotColor: #dcdfe6;
       &:focus {
         outline: none; /*取消掉默认的input focus状态*/
       }
+    }
+    .clear-btn {
+      width: 14px;
+      height: 14px;
+      font-size: 14px;
+      line-height: 14px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: #c0c4cc;
+      border-radius: 50%;
+      position: absolute;
+      right: 5px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .clear-btn:hover {
+      background: #909399;
     }
   }
 }
