@@ -1,6 +1,6 @@
 {
   "name": "kd-ip-input",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "An ip input for Vue2",
   "main": "dist/kd-ip-input.min.js",
   "files": [
@@ -19,19 +19,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rookiels/kd-ip-input"
+    "url": "https://github.com/lu-shuo/kd-ip-input"
   },
   "bugs": {
-    "url": "https://github.com/rookiels/kd-ip-input/issues"
+    "url": "https://github.com/lu-shuo/kd-ip-input/issues"
   },
   "keywords": [
+    "vue",
     "vue2",
     "vuejs",
     "ip",
     "ip-input",
     "kedacom"
   ],
-  "author": "rookie_ls",
+  "author": "lushuo",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.7",

@@ -2,7 +2,7 @@
 > An ip input component for Vue2.x
 
 ## Demo
-[https://rookiels.github.io/kd-ip-input/](https://rookiels.github.io/kd-ip-input/)
+[https://lu-shuo.github.io/kd-ip-input/](https://lu-shuo.github.io/kd-ip-input/)
 ## Usage
 
 ### Install
